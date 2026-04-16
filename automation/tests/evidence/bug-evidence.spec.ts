@@ -53,7 +53,7 @@ async function bootstrap(page: import('@playwright/test').Page) {
 }
 
 test.describe('Bug evidence', () => {
-  test('BUG-001 — after-fix: validation clears immediately on radio change', async ({ page }) => {
+  test('BUG-001 — after-fix: validation clears immediately on radio change', async ({ page }, testInfo) => {
     await bootstrap(page);
     // Step 1
     await page.locator('#postcode-input').fill('SW1A 1AA');
@@ -72,9 +72,10 @@ test.describe('Bug evidence', () => {
     await page.getByTestId('plasterboard-under_10').click();
     await expect(page.getByTestId('waste-validation')).toBeHidden();
     await page.screenshot({ path: join(OUT, 'BUG-001-after.png'), fullPage: true });
+    await saveVideo(page, testInfo, 'BUG-001-after-fix-validation-clear', OUT);
   });
 
-  test('BUG-004 — re-submit same postcode unselects the address', async ({ page }) => {
+  test('BUG-004 — re-submit same postcode unselects the address', async ({ page }, testInfo) => {
     await bootstrap(page);
     await page.locator('#postcode-input').fill('SW1A 1AA');
     await page.getByTestId('postcode-submit').click();
@@ -88,6 +89,7 @@ test.describe('Bug evidence', () => {
     await page.getByTestId('address-list').waitFor();
     await expect(page.locator('input[name="address"][value="addr_sw1a_01"]')).not.toBeChecked();
     await page.screenshot({ path: join(OUT, 'BUG-004-after.png'), fullPage: true });
+    await saveVideo(page, testInfo, 'BUG-004-resubmit-same-postcode-selection-loss', OUT);
   });
 
   test('BUG-002 — Back from Step 2 re-fires postcode lookup', async ({ page }, testInfo) => {
