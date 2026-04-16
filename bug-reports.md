@@ -62,14 +62,18 @@ In `ui/src/steps/WasteTypeStep.tsx`, `setValidation(null)` is only invoked insid
 
 ### Evidence
 
-- Before-fix screenshot: [`evidence/bugs/BUG-001-before.png`](./evidence/bugs/BUG-001-before.png) — validation message still visible after radio is selected.
-- After-fix screenshot: [`evidence/bugs/BUG-001-after.png`](./evidence/bugs/BUG-001-after.png) — message clears immediately on selection.
+- Before-fix screenshot: 
+  ![BUG-001 Before](./evidence/bugs/BUG-001-before.png)
+  *validation message still visible after radio is selected.*
+- After-fix screenshot: 
+  ![BUG-001 After](./evidence/bugs/BUG-001-after.png)
+  *message clears immediately on selection.*
 - Original source line (pre-fix): `ui/src/steps/WasteTypeStep.tsx` — only clear-site was `handleSubmit`.
 - Fix diff: `setValidation(null)` added to `handleGeneralToggle`, `handlePlasterboardToggle`, `handlePlasterboardOption`, and the Heavy checkbox `onChange`.
 
 ### Test coverage
 
-- Manual: `manual-tests.md` WT-N-02 (reproduces the scenario; marked Pass because the initial validation *does* appear — but doesn't verify auto-clear).
+- Manual: `manual-tests.md` TC-N04 (reproduces the scenario; marked Pass because the initial validation *does* appear — but doesn't explicitly verify the auto-clear fix).
 - Recommendation: add an explicit automated assertion that the validation message hides after the option is picked.
 
 ---
@@ -122,7 +126,9 @@ Fix options:
 
 ### Evidence
 
-- Network-tab screenshot: [`evidence/bugs/BUG-002-network.png`](./evidence/bugs/BUG-002-network.png) — second `POST /api/postcode/lookup` visible after Back.
+- Network-tab screenshot: 
+  ![BUG-002 Network](./evidence/bugs/BUG-002-network.png)
+  *second POST /api/postcode/lookup visible after Back.*
 - Source: `ui/src/steps/PostcodeStep.tsx` `useEffect` on mount that calls `runLookup(initialPostcode)` whenever `initialPostcode` is non-empty.
 
 ### Test coverage
@@ -181,12 +187,14 @@ Fix options:
 
 ### Evidence
 
-- Side-by-side screenshot: [`evidence/bugs/BUG-003-counter-leak.png`](./evidence/bugs/BUG-003-counter-leak.png) — first run shows error; second run after "Book another skip" returns 200 directly.
+- Side-by-side screenshot:
+  ![BUG-003 Counter Leak](./evidence/bugs/BUG-003-counter-leak.png)
+  *first run shows error; second run after "Book another skip" returns 200 directly.*
 - Source: `ui/src/mocks/fixtures/state.ts` (module-scope singleton), `ui/src/App.tsx::INITIAL` (does not trigger mock reset).
 
 ### Test coverage
 
-- Manual: `manual-tests.md` PC-A-01 reproduces the first-time behaviour. A second run would need a beforeEach reset — implicit in `test-fixtures.ts::freshPage`.
+- Manual: `manual-tests.md` TC-T01 reproduces the first-time behaviour. A second run would need a beforeEach reset — implicit in `test-fixtures.ts::freshPage`.
 - Recommendation: extend automated `freshPage` reset to also fire from the app on `setState(INITIAL)` in dev builds so manual demos stay truthful.
 
 ---
@@ -267,10 +275,13 @@ function handleSubmit(e: React.FormEvent) {
 
 ### Evidence
 
-- Screenshot pair: [`evidence/bugs/BUG-004-before.png`](./evidence/bugs/BUG-004-before.png) (selected) and [`evidence/bugs/BUG-004-after.png`](./evidence/bugs/BUG-004-after.png) (unselected after resubmit).
+- Screenshot pair:
+  ![BUG-004 Before (selected)](./evidence/bugs/BUG-004-before.png)
+  
+  ![BUG-004 After (unselected after resubmit)](./evidence/bugs/BUG-004-after.png)
 - Source: `ui/src/steps/PostcodeStep.tsx` — `handleSubmit` and `runLookup`.
 
 ### Test coverage
 
-- No existing manual case directly catches this (PC-T-01 only asserts the *changed-postcode* path).
-- Recommendation: add `PC-T-02` — "Re-submitting an unchanged postcode preserves the selected address" — and a Playwright assertion in `flow-a-general.spec.ts` after step 1.
+- No existing manual case directly catches this (TC-T04 only asserts the *changed-postcode* path).
+- Recommendation: add a new scenario — "Re-submitting an unchanged postcode preserves the selected address" — and a Playwright assertion in `flow-a-general.spec.ts` after step 1.

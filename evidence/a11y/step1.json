@@ -13,7 +13,7 @@
     "orientationAngle": 0,
     "orientationType": "landscape-primary"
   },
-  "timestamp": "2026-04-16T18:30:12.250Z",
+  "timestamp": "2026-04-16T18:55:37.314Z",
   "url": "http://localhost:5173/",
   "toolOptions": {
     "runOnly": {
@@ -859,7 +859,7 @@
           "impact": null,
           "html": "<div tabindex=\"-1\" aria-live=\"polite\" class=\"outline-none\">",
           "target": [
-            ".outline-none"
+            "div[aria-live=\"polite\"]"
           ]
         },
         {
@@ -925,7 +925,7 @@
           "impact": null,
           "html": "<span aria-current=\"step\" class=\"inline-flex items-center justify-center rounded-full w-6 h-6 text-xs font-medium bg-brand-600 text-white\">1</span>",
           "target": [
-            "span[aria-current=\"step\"]"
+            ".bg-brand-600"
           ]
         },
         {
@@ -994,7 +994,7 @@
           "impact": null,
           "html": "<div tabindex=\"-1\" aria-live=\"polite\" class=\"outline-none\">",
           "target": [
-            ".outline-none"
+            "div[aria-live=\"polite\"]"
           ]
         },
         {
@@ -1030,7 +1030,7 @@
           "impact": null,
           "html": "<span aria-current=\"step\" class=\"inline-flex items-center justify-center rounded-full w-6 h-6 text-xs font-medium bg-brand-600 text-white\">1</span>",
           "target": [
-            "span[aria-current=\"step\"]"
+            ".bg-brand-600"
           ]
         },
         {
@@ -1238,7 +1238,7 @@
           "impact": null,
           "html": "<div tabindex=\"-1\" aria-live=\"polite\" class=\"outline-none\">",
           "target": [
-            ".outline-none"
+            "div[aria-live=\"polite\"]"
           ]
         },
         {
@@ -1274,7 +1274,7 @@
           "impact": null,
           "html": "<span aria-current=\"step\" class=\"inline-flex items-center justify-center rounded-full w-6 h-6 text-xs font-medium bg-brand-600 text-white\">1</span>",
           "target": [
-            "span[aria-current=\"step\"]"
+            ".bg-brand-600"
           ]
         },
         {
@@ -1342,7 +1342,7 @@
           "impact": null,
           "html": "<div tabindex=\"-1\" aria-live=\"polite\" class=\"outline-none\">",
           "target": [
-            ".outline-none"
+            "div[aria-live=\"polite\"]"
           ]
         },
         {
@@ -1406,7 +1406,7 @@
           "impact": null,
           "html": "<span aria-current=\"step\" class=\"inline-flex items-center justify-center rounded-full w-6 h-6 text-xs font-medium bg-brand-600 text-white\">1</span>",
           "target": [
-            "span[aria-current=\"step\"]"
+            ".bg-brand-600"
           ]
         },
         {
@@ -1474,7 +1474,7 @@
           "impact": null,
           "html": "<div tabindex=\"-1\" aria-live=\"polite\" class=\"outline-none\">",
           "target": [
-            ".outline-none"
+            "div[aria-live=\"polite\"]"
           ]
         },
         {
@@ -1510,7 +1510,7 @@
           "impact": null,
           "html": "<span aria-current=\"step\" class=\"inline-flex items-center justify-center rounded-full w-6 h-6 text-xs font-medium bg-brand-600 text-white\">1</span>",
           "target": [
-            "span[aria-current=\"step\"]"
+            ".bg-brand-600"
           ]
         },
         {
@@ -1594,7 +1594,7 @@
     },
     {
       "id": "color-contrast",
-      "impact": null,
+      "impact": "serious",
       "tags": [
         "cat.color",
         "wcag2aa",
@@ -1616,41 +1616,16 @@
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#1d4ed8",
-                "contrastRatio": 6.7,
-                "fontSize": "9.0pt (12px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 6.7"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<span aria-current=\"step\" class=\"inline-flex items-center justify-center rounded-full w-6 h-6 text-xs font-medium bg-brand-600 text-white\">1</span>",
-          "target": [
-            "span[aria-current=\"step\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#0f172a",
-                "bgColor": "#f8fafc",
-                "contrastRatio": 17.06,
+                "fgColor": "#10131b",
+                "bgColor": "#f9fafb",
+                "contrastRatio": 17.76,
                 "fontSize": "10.5pt (14px)",
                 "fontWeight": "normal",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 17.06"
+              "message": "Element has sufficient color contrast of 17.76"
             }
           ],
           "all": [],
@@ -1683,7 +1658,7 @@
           "impact": null,
           "html": "<span class=\"inline-flex items-center justify-center rounded-full w-6 h-6 text-xs font-medium bg-slate-200 text-slate-600\">2</span>",
           "target": [
-            ".gap-2.items-center:nth-child(2) > .bg-slate-200.rounded-full.w-6"
+            ".gap-2.items-center:nth-child(2) > .bg-slate-200.text-slate-600.rounded-full"
           ]
         },
         {
@@ -1692,15 +1667,15 @@
               "id": "color-contrast",
               "data": {
                 "fgColor": "#64748b",
-                "bgColor": "#f8fafc",
-                "contrastRatio": 4.54,
+                "bgColor": "#f9fafb",
+                "contrastRatio": 4.55,
                 "fontSize": "10.5pt (14px)",
                 "fontWeight": "normal",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 4.54"
+              "message": "Element has sufficient color contrast of 4.55"
             }
           ],
           "all": [],
@@ -1733,7 +1708,7 @@
           "impact": null,
           "html": "<span class=\"inline-flex items-center justify-center rounded-full w-6 h-6 text-xs font-medium bg-slate-200 text-slate-600\">3</span>",
           "target": [
-            ".gap-2.items-center:nth-child(3) > .bg-slate-200.rounded-full.w-6"
+            ".gap-2.items-center:nth-child(3) > .bg-slate-200.text-slate-600.rounded-full"
           ]
         },
         {
@@ -1742,15 +1717,15 @@
               "id": "color-contrast",
               "data": {
                 "fgColor": "#64748b",
-                "bgColor": "#f8fafc",
-                "contrastRatio": 4.54,
+                "bgColor": "#f9fafb",
+                "contrastRatio": 4.55,
                 "fontSize": "10.5pt (14px)",
                 "fontWeight": "normal",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 4.54"
+              "message": "Element has sufficient color contrast of 4.55"
             }
           ],
           "all": [],
@@ -1783,7 +1758,7 @@
           "impact": null,
           "html": "<span class=\"inline-flex items-center justify-center rounded-full w-6 h-6 text-xs font-medium bg-slate-200 text-slate-600\">4</span>",
           "target": [
-            ".gap-2.items-center:nth-child(4) > .bg-slate-200.rounded-full.w-6"
+            ".gap-2.items-center:nth-child(4) > .bg-slate-200.text-slate-600.rounded-full"
           ]
         },
         {
@@ -1792,15 +1767,15 @@
               "id": "color-contrast",
               "data": {
                 "fgColor": "#64748b",
-                "bgColor": "#f8fafc",
-                "contrastRatio": 4.54,
+                "bgColor": "#f9fafb",
+                "contrastRatio": 4.55,
                 "fontSize": "10.5pt (14px)",
                 "fontWeight": "normal",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 4.54"
+              "message": "Element has sufficient color contrast of 4.55"
             }
           ],
           "all": [],
@@ -1817,15 +1792,15 @@
               "id": "color-contrast",
               "data": {
                 "fgColor": "#64748b",
-                "bgColor": "#f8fafc",
-                "contrastRatio": 4.54,
+                "bgColor": "#f9fafb",
+                "contrastRatio": 4.55,
                 "fontSize": "10.5pt (14px)",
                 "fontWeight": "normal",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 4.54"
+              "message": "Element has sufficient color contrast of 4.55"
             }
           ],
           "all": [],
@@ -1841,16 +1816,16 @@
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#0f172a",
-                "bgColor": "#f8fafc",
-                "contrastRatio": 17.06,
+                "fgColor": "#10131b",
+                "bgColor": "#f9fafb",
+                "contrastRatio": 17.76,
                 "fontSize": "18.0pt (24px)",
                 "fontWeight": "normal",
                 "expectedContrastRatio": "3:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 17.06"
+              "message": "Element has sufficient color contrast of 17.76"
             }
           ],
           "all": [],
@@ -1866,16 +1841,16 @@
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#0f172a",
-                "bgColor": "#f8fafc",
-                "contrastRatio": 17.06,
+                "fgColor": "#10131b",
+                "bgColor": "#f9fafb",
+                "contrastRatio": 17.76,
                 "fontSize": "10.5pt (14px)",
                 "fontWeight": "normal",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 17.06"
+              "message": "Element has sufficient color contrast of 17.76"
             }
           ],
           "all": [],
@@ -1891,22 +1866,22 @@
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#0f172a",
+                "fgColor": "#10131b",
                 "bgColor": "#ffffff",
-                "contrastRatio": 17.85,
-                "fontSize": "12.0pt (16px)",
+                "contrastRatio": 18.56,
+                "fontSize": "13.5pt (18px)",
                 "fontWeight": "normal",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 17.85"
+              "message": "Element has sufficient color contrast of 18.56"
             }
           ],
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<input id=\"postcode-input\" name=\"postcode\" type=\"text\" inputmode=\"text\" autocomplete=\"postal-code\" autocapitalize=\"characters\" placeholder=\"e.g. SW1A 1AA\" class=\"flex-1 rounded-md border border-slate-300 px-3 py-2 text-base min-h-[44px]\" value=\"SW1A 1AA\">",
+          "html": "<input id=\"postcode-input\" name=\"postcode\" type=\"text\" inputmode=\"text\" autocomplete=\"postal-code\" autocapitalize=\"characters\" placeholder=\"e.g. SW1A 1AA\" class=\"flex-1 rounded-xl bo...\" value=\"SW1A 1AA\">",
           "target": [
             "#postcode-input"
           ]
@@ -1916,41 +1891,16 @@
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#ffffff",
-                "bgColor": "#1e40af",
-                "contrastRatio": 8.72,
+                "fgColor": "#10131b",
+                "bgColor": "#f9fafb",
+                "contrastRatio": 17.76,
                 "fontSize": "10.5pt (14px)",
                 "fontWeight": "normal",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 8.72"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": null,
-          "html": "<button class=\"inline-flex items-ce...\" type=\"submit\" data-testid=\"postcode-submit\">",
-          "target": [
-            "button[type=\"submit\"]"
-          ]
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#0f172a",
-                "bgColor": "#f8fafc",
-                "contrastRatio": 17.06,
-                "fontSize": "10.5pt (14px)",
-                "fontWeight": "normal",
-                "expectedContrastRatio": "4.5:1"
-              },
-              "relatedNodes": [],
-              "impact": "serious",
-              "message": "Element has sufficient color contrast of 17.06"
+              "message": "Element has sufficient color contrast of 17.76"
             }
           ],
           "all": [],
@@ -1966,24 +1916,24 @@
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#0f172a",
-                "bgColor": "#f8fafc",
-                "contrastRatio": 17.06,
-                "fontSize": "12.0pt (16px)",
-                "fontWeight": "normal",
+                "fgColor": "#10131b",
+                "bgColor": "#ffffff",
+                "contrastRatio": 18.56,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 17.06"
+              "message": "Element has sufficient color contrast of 18.56"
             }
           ],
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<span class=\"block font-medium\">10 Downing Street</span>",
+          "html": "<span class=\"block font-bold text-navy-900 text-lg\">10 Downing Street</span>",
           "target": [
-            "label[data-testid=\"address-option-addr_sw1a_01\"] > span > .font-medium.block"
+            "label[data-testid=\"address-option-addr_sw1a_01\"] > span > .text-navy-900.text-lg.font-bold"
           ]
         },
         {
@@ -1991,24 +1941,24 @@
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#475569",
-                "bgColor": "#f8fafc",
-                "contrastRatio": 7.24,
+                "fgColor": "#6b7280",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4.83,
                 "fontSize": "10.5pt (14px)",
                 "fontWeight": "normal",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 7.24"
+              "message": "Element has sufficient color contrast of 4.83"
             }
           ],
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<span class=\"block text-sm text-slate-600\">London</span>",
+          "html": "<span class=\"block text-sm text-gray-500 font-medium\">London</span>",
           "target": [
-            "label[data-testid=\"address-option-addr_sw1a_01\"] > span > .text-slate-600.text-sm.block"
+            "label[data-testid=\"address-option-addr_sw1a_01\"] > span > .text-gray-500.text-sm.font-medium"
           ]
         },
         {
@@ -2016,24 +1966,24 @@
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#0f172a",
-                "bgColor": "#f8fafc",
-                "contrastRatio": 17.06,
-                "fontSize": "12.0pt (16px)",
-                "fontWeight": "normal",
+                "fgColor": "#10131b",
+                "bgColor": "#ffffff",
+                "contrastRatio": 18.56,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 17.06"
+              "message": "Element has sufficient color contrast of 18.56"
             }
           ],
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<span class=\"block font-medium\">11 Downing Street</span>",
+          "html": "<span class=\"block font-bold text-navy-900 text-lg\">11 Downing Street</span>",
           "target": [
-            "label[data-testid=\"address-option-addr_sw1a_02\"] > span > .font-medium.block"
+            "label[data-testid=\"address-option-addr_sw1a_02\"] > span > .text-navy-900.text-lg.font-bold"
           ]
         },
         {
@@ -2041,24 +1991,24 @@
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#475569",
-                "bgColor": "#f8fafc",
-                "contrastRatio": 7.24,
+                "fgColor": "#6b7280",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4.83,
                 "fontSize": "10.5pt (14px)",
                 "fontWeight": "normal",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 7.24"
+              "message": "Element has sufficient color contrast of 4.83"
             }
           ],
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<span class=\"block text-sm text-slate-600\">London</span>",
+          "html": "<span class=\"block text-sm text-gray-500 font-medium\">London</span>",
           "target": [
-            "label[data-testid=\"address-option-addr_sw1a_02\"] > span > .text-slate-600.text-sm.block"
+            "label[data-testid=\"address-option-addr_sw1a_02\"] > span > .text-gray-500.text-sm.font-medium"
           ]
         },
         {
@@ -2066,24 +2016,24 @@
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#0f172a",
-                "bgColor": "#f8fafc",
-                "contrastRatio": 17.06,
-                "fontSize": "12.0pt (16px)",
-                "fontWeight": "normal",
+                "fgColor": "#10131b",
+                "bgColor": "#ffffff",
+                "contrastRatio": 18.56,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 17.06"
+              "message": "Element has sufficient color contrast of 18.56"
             }
           ],
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<span class=\"block font-medium\">12 Downing Street</span>",
+          "html": "<span class=\"block font-bold text-navy-900 text-lg\">12 Downing Street</span>",
           "target": [
-            "label[data-testid=\"address-option-addr_sw1a_03\"] > span > .font-medium.block"
+            "label[data-testid=\"address-option-addr_sw1a_03\"] > span > .text-navy-900.text-lg.font-bold"
           ]
         },
         {
@@ -2091,24 +2041,24 @@
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#475569",
-                "bgColor": "#f8fafc",
-                "contrastRatio": 7.24,
+                "fgColor": "#6b7280",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4.83,
                 "fontSize": "10.5pt (14px)",
                 "fontWeight": "normal",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 7.24"
+              "message": "Element has sufficient color contrast of 4.83"
             }
           ],
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<span class=\"block text-sm text-slate-600\">London</span>",
+          "html": "<span class=\"block text-sm text-gray-500 font-medium\">London</span>",
           "target": [
-            "label[data-testid=\"address-option-addr_sw1a_03\"] > span > .text-slate-600.text-sm.block"
+            "label[data-testid=\"address-option-addr_sw1a_03\"] > span > .text-gray-500.text-sm.font-medium"
           ]
         },
         {
@@ -2116,24 +2066,24 @@
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#0f172a",
-                "bgColor": "#f8fafc",
-                "contrastRatio": 17.06,
-                "fontSize": "12.0pt (16px)",
-                "fontWeight": "normal",
+                "fgColor": "#10131b",
+                "bgColor": "#ffffff",
+                "contrastRatio": 18.56,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 17.06"
+              "message": "Element has sufficient color contrast of 18.56"
             }
           ],
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<span class=\"block font-medium\">The Cabinet Office, 70 Whitehall</span>",
+          "html": "<span class=\"block font-bold text-navy-900 text-lg\">The Cabinet Office, 70 Whitehall</span>",
           "target": [
-            "label[data-testid=\"address-option-addr_sw1a_04\"] > span > .font-medium.block"
+            "label[data-testid=\"address-option-addr_sw1a_04\"] > span > .text-navy-900.text-lg.font-bold"
           ]
         },
         {
@@ -2141,24 +2091,24 @@
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#475569",
-                "bgColor": "#f8fafc",
-                "contrastRatio": 7.24,
+                "fgColor": "#6b7280",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4.83,
                 "fontSize": "10.5pt (14px)",
                 "fontWeight": "normal",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 7.24"
+              "message": "Element has sufficient color contrast of 4.83"
             }
           ],
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<span class=\"block text-sm text-slate-600\">London</span>",
+          "html": "<span class=\"block text-sm text-gray-500 font-medium\">London</span>",
           "target": [
-            "label[data-testid=\"address-option-addr_sw1a_04\"] > span > .text-slate-600.text-sm.block"
+            "label[data-testid=\"address-option-addr_sw1a_04\"] > span > .text-gray-500.text-sm.font-medium"
           ]
         },
         {
@@ -2166,24 +2116,24 @@
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#0f172a",
-                "bgColor": "#f8fafc",
-                "contrastRatio": 17.06,
-                "fontSize": "12.0pt (16px)",
-                "fontWeight": "normal",
+                "fgColor": "#10131b",
+                "bgColor": "#ffffff",
+                "contrastRatio": 18.56,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 17.06"
+              "message": "Element has sufficient color contrast of 18.56"
             }
           ],
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<span class=\"block font-medium\">36 Whitehall</span>",
+          "html": "<span class=\"block font-bold text-navy-900 text-lg\">36 Whitehall</span>",
           "target": [
-            "label[data-testid=\"address-option-addr_sw1a_05\"] > span > .font-medium.block"
+            "label[data-testid=\"address-option-addr_sw1a_05\"] > span > .text-navy-900.text-lg.font-bold"
           ]
         },
         {
@@ -2191,24 +2141,24 @@
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#475569",
-                "bgColor": "#f8fafc",
-                "contrastRatio": 7.24,
+                "fgColor": "#6b7280",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4.83,
                 "fontSize": "10.5pt (14px)",
                 "fontWeight": "normal",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 7.24"
+              "message": "Element has sufficient color contrast of 4.83"
             }
           ],
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<span class=\"block text-sm text-slate-600\">London</span>",
+          "html": "<span class=\"block text-sm text-gray-500 font-medium\">London</span>",
           "target": [
-            "label[data-testid=\"address-option-addr_sw1a_05\"] > span > .text-slate-600.text-sm.block"
+            "label[data-testid=\"address-option-addr_sw1a_05\"] > span > .text-gray-500.text-sm.font-medium"
           ]
         },
         {
@@ -2216,24 +2166,24 @@
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#0f172a",
-                "bgColor": "#f8fafc",
-                "contrastRatio": 17.06,
-                "fontSize": "12.0pt (16px)",
-                "fontWeight": "normal",
+                "fgColor": "#10131b",
+                "bgColor": "#ffffff",
+                "contrastRatio": 18.56,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 17.06"
+              "message": "Element has sufficient color contrast of 18.56"
             }
           ],
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<span class=\"block font-medium\">Horse Guards Parade</span>",
+          "html": "<span class=\"block font-bold text-navy-900 text-lg\">Horse Guards Parade</span>",
           "target": [
-            "label[data-testid=\"address-option-addr_sw1a_06\"] > span > .font-medium.block"
+            "label[data-testid=\"address-option-addr_sw1a_06\"] > span > .text-navy-900.text-lg.font-bold"
           ]
         },
         {
@@ -2241,24 +2191,24 @@
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#475569",
-                "bgColor": "#f8fafc",
-                "contrastRatio": 7.24,
+                "fgColor": "#6b7280",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4.83,
                 "fontSize": "10.5pt (14px)",
                 "fontWeight": "normal",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 7.24"
+              "message": "Element has sufficient color contrast of 4.83"
             }
           ],
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<span class=\"block text-sm text-slate-600\">London</span>",
+          "html": "<span class=\"block text-sm text-gray-500 font-medium\">London</span>",
           "target": [
-            "label[data-testid=\"address-option-addr_sw1a_06\"] > span > .text-slate-600.text-sm.block"
+            "label[data-testid=\"address-option-addr_sw1a_06\"] > span > .text-gray-500.text-sm.font-medium"
           ]
         },
         {
@@ -2266,24 +2216,24 @@
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#0f172a",
-                "bgColor": "#f8fafc",
-                "contrastRatio": 17.06,
-                "fontSize": "12.0pt (16px)",
-                "fontWeight": "normal",
+                "fgColor": "#10131b",
+                "bgColor": "#ffffff",
+                "contrastRatio": 18.56,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 17.06"
+              "message": "Element has sufficient color contrast of 18.56"
             }
           ],
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<span class=\"block font-medium\">Admiralty House, Whitehall</span>",
+          "html": "<span class=\"block font-bold text-navy-900 text-lg\">Admiralty House, Whitehall</span>",
           "target": [
-            "label[data-testid=\"address-option-addr_sw1a_07\"] > span > .font-medium.block"
+            "label[data-testid=\"address-option-addr_sw1a_07\"] > span > .text-navy-900.text-lg.font-bold"
           ]
         },
         {
@@ -2291,24 +2241,24 @@
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#475569",
-                "bgColor": "#f8fafc",
-                "contrastRatio": 7.24,
+                "fgColor": "#6b7280",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4.83,
                 "fontSize": "10.5pt (14px)",
                 "fontWeight": "normal",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 7.24"
+              "message": "Element has sufficient color contrast of 4.83"
             }
           ],
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<span class=\"block text-sm text-slate-600\">London</span>",
+          "html": "<span class=\"block text-sm text-gray-500 font-medium\">London</span>",
           "target": [
-            "label[data-testid=\"address-option-addr_sw1a_07\"] > span > .text-slate-600.text-sm.block"
+            "label[data-testid=\"address-option-addr_sw1a_07\"] > span > .text-gray-500.text-sm.font-medium"
           ]
         },
         {
@@ -2316,24 +2266,24 @@
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#0f172a",
-                "bgColor": "#f8fafc",
-                "contrastRatio": 17.06,
-                "fontSize": "12.0pt (16px)",
-                "fontWeight": "normal",
+                "fgColor": "#10131b",
+                "bgColor": "#ffffff",
+                "contrastRatio": 18.56,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 17.06"
+              "message": "Element has sufficient color contrast of 18.56"
             }
           ],
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<span class=\"block font-medium\">1 Horse Guards Road</span>",
+          "html": "<span class=\"block font-bold text-navy-900 text-lg\">1 Horse Guards Road</span>",
           "target": [
-            "label[data-testid=\"address-option-addr_sw1a_08\"] > span > .font-medium.block"
+            "label[data-testid=\"address-option-addr_sw1a_08\"] > span > .text-navy-900.text-lg.font-bold"
           ]
         },
         {
@@ -2341,24 +2291,24 @@
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#475569",
-                "bgColor": "#f8fafc",
-                "contrastRatio": 7.24,
+                "fgColor": "#6b7280",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4.83,
                 "fontSize": "10.5pt (14px)",
                 "fontWeight": "normal",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 7.24"
+              "message": "Element has sufficient color contrast of 4.83"
             }
           ],
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<span class=\"block text-sm text-slate-600\">London</span>",
+          "html": "<span class=\"block text-sm text-gray-500 font-medium\">London</span>",
           "target": [
-            "label[data-testid=\"address-option-addr_sw1a_08\"] > span > .text-slate-600.text-sm.block"
+            "label[data-testid=\"address-option-addr_sw1a_08\"] > span > .text-gray-500.text-sm.font-medium"
           ]
         },
         {
@@ -2366,24 +2316,24 @@
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#0f172a",
-                "bgColor": "#f8fafc",
-                "contrastRatio": 17.06,
-                "fontSize": "12.0pt (16px)",
-                "fontWeight": "normal",
+                "fgColor": "#10131b",
+                "bgColor": "#ffffff",
+                "contrastRatio": 18.56,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 17.06"
+              "message": "Element has sufficient color contrast of 18.56"
             }
           ],
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<span class=\"block font-medium\">100 Parliament Street</span>",
+          "html": "<span class=\"block font-bold text-navy-900 text-lg\">100 Parliament Street</span>",
           "target": [
-            "label[data-testid=\"address-option-addr_sw1a_09\"] > span > .font-medium.block"
+            "label[data-testid=\"address-option-addr_sw1a_09\"] > span > .text-navy-900.text-lg.font-bold"
           ]
         },
         {
@@ -2391,24 +2341,24 @@
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#475569",
-                "bgColor": "#f8fafc",
-                "contrastRatio": 7.24,
+                "fgColor": "#6b7280",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4.83,
                 "fontSize": "10.5pt (14px)",
                 "fontWeight": "normal",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 7.24"
+              "message": "Element has sufficient color contrast of 4.83"
             }
           ],
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<span class=\"block text-sm text-slate-600\">London</span>",
+          "html": "<span class=\"block text-sm text-gray-500 font-medium\">London</span>",
           "target": [
-            "label[data-testid=\"address-option-addr_sw1a_09\"] > span > .text-slate-600.text-sm.block"
+            "label[data-testid=\"address-option-addr_sw1a_09\"] > span > .text-gray-500.text-sm.font-medium"
           ]
         },
         {
@@ -2416,24 +2366,24 @@
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#0f172a",
-                "bgColor": "#f8fafc",
-                "contrastRatio": 17.06,
-                "fontSize": "12.0pt (16px)",
-                "fontWeight": "normal",
+                "fgColor": "#10131b",
+                "bgColor": "#ffffff",
+                "contrastRatio": 18.56,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 17.06"
+              "message": "Element has sufficient color contrast of 18.56"
             }
           ],
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<span class=\"block font-medium\">Parliament Square</span>",
+          "html": "<span class=\"block font-bold text-navy-900 text-lg\">Parliament Square</span>",
           "target": [
-            "label[data-testid=\"address-option-addr_sw1a_10\"] > span > .font-medium.block"
+            "label[data-testid=\"address-option-addr_sw1a_10\"] > span > .text-navy-900.text-lg.font-bold"
           ]
         },
         {
@@ -2441,24 +2391,24 @@
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#475569",
-                "bgColor": "#f8fafc",
-                "contrastRatio": 7.24,
+                "fgColor": "#6b7280",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4.83,
                 "fontSize": "10.5pt (14px)",
                 "fontWeight": "normal",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 7.24"
+              "message": "Element has sufficient color contrast of 4.83"
             }
           ],
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<span class=\"block text-sm text-slate-600\">London</span>",
+          "html": "<span class=\"block text-sm text-gray-500 font-medium\">London</span>",
           "target": [
-            "label[data-testid=\"address-option-addr_sw1a_10\"] > span > .text-slate-600.text-sm.block"
+            "label[data-testid=\"address-option-addr_sw1a_10\"] > span > .text-gray-500.text-sm.font-medium"
           ]
         },
         {
@@ -2466,24 +2416,24 @@
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#0f172a",
-                "bgColor": "#f8fafc",
-                "contrastRatio": 17.06,
-                "fontSize": "12.0pt (16px)",
-                "fontWeight": "normal",
+                "fgColor": "#10131b",
+                "bgColor": "#ffffff",
+                "contrastRatio": 18.56,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 17.06"
+              "message": "Element has sufficient color contrast of 18.56"
             }
           ],
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<span class=\"block font-medium\">Westminster Abbey, 20 Dean's Yard</span>",
+          "html": "<span class=\"block font-bold text-navy-900 text-lg\">Westminster Abbey, 20 Dean's Yard</span>",
           "target": [
-            "label[data-testid=\"address-option-addr_sw1a_11\"] > span > .font-medium.block"
+            "label[data-testid=\"address-option-addr_sw1a_11\"] > span > .text-navy-900.text-lg.font-bold"
           ]
         },
         {
@@ -2491,24 +2441,24 @@
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#475569",
-                "bgColor": "#f8fafc",
-                "contrastRatio": 7.24,
+                "fgColor": "#6b7280",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4.83,
                 "fontSize": "10.5pt (14px)",
                 "fontWeight": "normal",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 7.24"
+              "message": "Element has sufficient color contrast of 4.83"
             }
           ],
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<span class=\"block text-sm text-slate-600\">London</span>",
+          "html": "<span class=\"block text-sm text-gray-500 font-medium\">London</span>",
           "target": [
-            "label[data-testid=\"address-option-addr_sw1a_11\"] > span > .text-slate-600.text-sm.block"
+            "label[data-testid=\"address-option-addr_sw1a_11\"] > span > .text-gray-500.text-sm.font-medium"
           ]
         },
         {
@@ -2516,24 +2466,24 @@
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#0f172a",
-                "bgColor": "#f8fafc",
-                "contrastRatio": 17.06,
-                "fontSize": "12.0pt (16px)",
-                "fontWeight": "normal",
+                "fgColor": "#10131b",
+                "bgColor": "#ffffff",
+                "contrastRatio": 18.56,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 17.06"
+              "message": "Element has sufficient color contrast of 18.56"
             }
           ],
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<span class=\"block font-medium\">St James's Park</span>",
+          "html": "<span class=\"block font-bold text-navy-900 text-lg\">St James's Park</span>",
           "target": [
-            "label[data-testid=\"address-option-addr_sw1a_12\"] > span > .font-medium.block"
+            "label[data-testid=\"address-option-addr_sw1a_12\"] > span > .text-navy-900.text-lg.font-bold"
           ]
         },
         {
@@ -2541,24 +2491,24 @@
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#475569",
-                "bgColor": "#f8fafc",
-                "contrastRatio": 7.24,
+                "fgColor": "#6b7280",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4.83,
                 "fontSize": "10.5pt (14px)",
                 "fontWeight": "normal",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 7.24"
+              "message": "Element has sufficient color contrast of 4.83"
             }
           ],
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<span class=\"block text-sm text-slate-600\">London</span>",
+          "html": "<span class=\"block text-sm text-gray-500 font-medium\">London</span>",
           "target": [
-            "label[data-testid=\"address-option-addr_sw1a_12\"] > span > .text-slate-600.text-sm.block"
+            "label[data-testid=\"address-option-addr_sw1a_12\"] > span > .text-gray-500.text-sm.font-medium"
           ]
         },
         {
@@ -2566,24 +2516,24 @@
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#0f172a",
-                "bgColor": "#f8fafc",
-                "contrastRatio": 17.06,
-                "fontSize": "12.0pt (16px)",
-                "fontWeight": "normal",
+                "fgColor": "#10131b",
+                "bgColor": "#ffffff",
+                "contrastRatio": 18.56,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 17.06"
+              "message": "Element has sufficient color contrast of 18.56"
             }
           ],
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<span class=\"block font-medium\">Buckingham Palace</span>",
+          "html": "<span class=\"block font-bold text-navy-900 text-lg\">Buckingham Palace</span>",
           "target": [
-            "label[data-testid=\"address-option-addr_sw1a_13\"] > span > .font-medium.block"
+            "label[data-testid=\"address-option-addr_sw1a_13\"] > span > .text-navy-900.text-lg.font-bold"
           ]
         },
         {
@@ -2591,24 +2541,24 @@
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#475569",
-                "bgColor": "#f8fafc",
-                "contrastRatio": 7.24,
+                "fgColor": "#6b7280",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4.83,
                 "fontSize": "10.5pt (14px)",
                 "fontWeight": "normal",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 7.24"
+              "message": "Element has sufficient color contrast of 4.83"
             }
           ],
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<span class=\"block text-sm text-slate-600\">London</span>",
+          "html": "<span class=\"block text-sm text-gray-500 font-medium\">London</span>",
           "target": [
-            "label[data-testid=\"address-option-addr_sw1a_13\"] > span > .text-slate-600.text-sm.block"
+            "label[data-testid=\"address-option-addr_sw1a_13\"] > span > .text-gray-500.text-sm.font-medium"
           ]
         },
         {
@@ -2616,24 +2566,24 @@
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#0f172a",
-                "bgColor": "#f8fafc",
-                "contrastRatio": 17.06,
-                "fontSize": "12.0pt (16px)",
-                "fontWeight": "normal",
+                "fgColor": "#10131b",
+                "bgColor": "#ffffff",
+                "contrastRatio": 18.56,
+                "fontSize": "13.5pt (18px)",
+                "fontWeight": "bold",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 17.06"
+              "message": "Element has sufficient color contrast of 18.56"
             }
           ],
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<span class=\"block font-medium\">Clarence House, Stable Yard</span>",
+          "html": "<span class=\"block font-bold text-navy-900 text-lg\">Clarence House, Stable Yard</span>",
           "target": [
-            "label[data-testid=\"address-option-addr_sw1a_14\"] > span > .font-medium.block"
+            "label[data-testid=\"address-option-addr_sw1a_14\"] > span > .text-navy-900.text-lg.font-bold"
           ]
         },
         {
@@ -2641,24 +2591,24 @@
             {
               "id": "color-contrast",
               "data": {
-                "fgColor": "#475569",
-                "bgColor": "#f8fafc",
-                "contrastRatio": 7.24,
+                "fgColor": "#6b7280",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4.83,
                 "fontSize": "10.5pt (14px)",
                 "fontWeight": "normal",
                 "expectedContrastRatio": "4.5:1"
               },
               "relatedNodes": [],
               "impact": "serious",
-              "message": "Element has sufficient color contrast of 7.24"
+              "message": "Element has sufficient color contrast of 4.83"
             }
           ],
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<span class=\"block text-sm text-slate-600\">London</span>",
+          "html": "<span class=\"block text-sm text-gray-500 font-medium\">London</span>",
           "target": [
-            "label[data-testid=\"address-option-addr_sw1a_14\"] > span > .text-slate-600.text-sm.block"
+            "label[data-testid=\"address-option-addr_sw1a_14\"] > span > .text-gray-500.text-sm.font-medium"
           ]
         }
       ]
@@ -2749,7 +2699,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<input id=\"postcode-input\" name=\"postcode\" type=\"text\" inputmode=\"text\" autocomplete=\"postal-code\" autocapitalize=\"characters\" placeholder=\"e.g. SW1A 1AA\" class=\"flex-1 rounded-md border border-slate-300 px-3 py-2 text-base min-h-[44px]\" value=\"SW1A 1AA\">",
+          "html": "<input id=\"postcode-input\" name=\"postcode\" type=\"text\" inputmode=\"text\" autocomplete=\"postal-code\" autocapitalize=\"characters\" placeholder=\"e.g. SW1A 1AA\" class=\"flex-1 rounded-xl bo...\" value=\"SW1A 1AA\">",
           "target": [
             "#postcode-input"
           ]
@@ -2794,7 +2744,7 @@
             }
           ],
           "impact": null,
-          "html": "<input id=\"postcode-input\" name=\"postcode\" type=\"text\" inputmode=\"text\" autocomplete=\"postal-code\" autocapitalize=\"characters\" placeholder=\"e.g. SW1A 1AA\" class=\"flex-1 rounded-md border border-slate-300 px-3 py-2 text-base min-h-[44px]\" value=\"SW1A 1AA\">",
+          "html": "<input id=\"postcode-input\" name=\"postcode\" type=\"text\" inputmode=\"text\" autocomplete=\"postal-code\" autocapitalize=\"characters\" placeholder=\"e.g. SW1A 1AA\" class=\"flex-1 rounded-xl bo...\" value=\"SW1A 1AA\">",
           "target": [
             "#postcode-input"
           ]
@@ -2808,7 +2758,7 @@
               "data": null,
               "relatedNodes": [
                 {
-                  "html": "<label class=\"flex items-start gap-3 rounded-md border p-3 cursor-pointer hover:bg-slate-50 border-slate-300\" data-testid=\"address-option-addr_sw1a_01\">",
+                  "html": "<label class=\"flex items-start gap-4 rounded-xl border-2 p-4 cursor-pointer glassmorphism border-gray-200 hover:border-brand-500/50\" data-testid=\"address-option-addr_sw1a_01\">",
                   "target": [
                     "label[data-testid=\"address-option-addr_sw1a_01\"]"
                   ]
@@ -2819,7 +2769,7 @@
             }
           ],
           "impact": null,
-          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1\" value=\"addr_sw1a_01\">",
+          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1 h-5 w-5 accent-brand-600 focus:ring-brand-500\" value=\"addr_sw1a_01\">",
           "target": [
             "input[value=\"addr_sw1a_01\"]"
           ]
@@ -2833,7 +2783,7 @@
               "data": null,
               "relatedNodes": [
                 {
-                  "html": "<label class=\"flex items-start gap-3 rounded-md border p-3 cursor-pointer hover:bg-slate-50 border-slate-300\" data-testid=\"address-option-addr_sw1a_02\">",
+                  "html": "<label class=\"flex items-start gap-4 rounded-xl border-2 p-4 cursor-pointer glassmorphism border-gray-200 hover:border-brand-500/50\" data-testid=\"address-option-addr_sw1a_02\">",
                   "target": [
                     "label[data-testid=\"address-option-addr_sw1a_02\"]"
                   ]
@@ -2844,7 +2794,7 @@
             }
           ],
           "impact": null,
-          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1\" value=\"addr_sw1a_02\">",
+          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1 h-5 w-5 accent-brand-600 focus:ring-brand-500\" value=\"addr_sw1a_02\">",
           "target": [
             "input[value=\"addr_sw1a_02\"]"
           ]
@@ -2858,7 +2808,7 @@
               "data": null,
               "relatedNodes": [
                 {
-                  "html": "<label class=\"flex items-start gap-3 rounded-md border p-3 cursor-pointer hover:bg-slate-50 border-slate-300\" data-testid=\"address-option-addr_sw1a_03\">",
+                  "html": "<label class=\"flex items-start gap-4 rounded-xl border-2 p-4 cursor-pointer glassmorphism border-gray-200 hover:border-brand-500/50\" data-testid=\"address-option-addr_sw1a_03\">",
                   "target": [
                     "label[data-testid=\"address-option-addr_sw1a_03\"]"
                   ]
@@ -2869,7 +2819,7 @@
             }
           ],
           "impact": null,
-          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1\" value=\"addr_sw1a_03\">",
+          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1 h-5 w-5 accent-brand-600 focus:ring-brand-500\" value=\"addr_sw1a_03\">",
           "target": [
             "input[value=\"addr_sw1a_03\"]"
           ]
@@ -2883,7 +2833,7 @@
               "data": null,
               "relatedNodes": [
                 {
-                  "html": "<label class=\"flex items-start gap-3 rounded-md border p-3 cursor-pointer hover:bg-slate-50 border-slate-300\" data-testid=\"address-option-addr_sw1a_04\">",
+                  "html": "<label class=\"flex items-start gap-4 rounded-xl border-2 p-4 cursor-pointer glassmorphism border-gray-200 hover:border-brand-500/50\" data-testid=\"address-option-addr_sw1a_04\">",
                   "target": [
                     "label[data-testid=\"address-option-addr_sw1a_04\"]"
                   ]
@@ -2894,7 +2844,7 @@
             }
           ],
           "impact": null,
-          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1\" value=\"addr_sw1a_04\">",
+          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1 h-5 w-5 accent-brand-600 focus:ring-brand-500\" value=\"addr_sw1a_04\">",
           "target": [
             "input[value=\"addr_sw1a_04\"]"
           ]
@@ -2908,7 +2858,7 @@
               "data": null,
               "relatedNodes": [
                 {
-                  "html": "<label class=\"flex items-start gap-3 rounded-md border p-3 cursor-pointer hover:bg-slate-50 border-slate-300\" data-testid=\"address-option-addr_sw1a_05\">",
+                  "html": "<label class=\"flex items-start gap-4 rounded-xl border-2 p-4 cursor-pointer glassmorphism border-gray-200 hover:border-brand-500/50\" data-testid=\"address-option-addr_sw1a_05\">",
                   "target": [
                     "label[data-testid=\"address-option-addr_sw1a_05\"]"
                   ]
@@ -2919,7 +2869,7 @@
             }
           ],
           "impact": null,
-          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1\" value=\"addr_sw1a_05\">",
+          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1 h-5 w-5 accent-brand-600 focus:ring-brand-500\" value=\"addr_sw1a_05\">",
           "target": [
             "input[value=\"addr_sw1a_05\"]"
           ]
@@ -2933,7 +2883,7 @@
               "data": null,
               "relatedNodes": [
                 {
-                  "html": "<label class=\"flex items-start gap-3 rounded-md border p-3 cursor-pointer hover:bg-slate-50 border-slate-300\" data-testid=\"address-option-addr_sw1a_06\">",
+                  "html": "<label class=\"flex items-start gap-4 rounded-xl border-2 p-4 cursor-pointer glassmorphism border-gray-200 hover:border-brand-500/50\" data-testid=\"address-option-addr_sw1a_06\">",
                   "target": [
                     "label[data-testid=\"address-option-addr_sw1a_06\"]"
                   ]
@@ -2944,7 +2894,7 @@
             }
           ],
           "impact": null,
-          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1\" value=\"addr_sw1a_06\">",
+          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1 h-5 w-5 accent-brand-600 focus:ring-brand-500\" value=\"addr_sw1a_06\">",
           "target": [
             "input[value=\"addr_sw1a_06\"]"
           ]
@@ -2958,7 +2908,7 @@
               "data": null,
               "relatedNodes": [
                 {
-                  "html": "<label class=\"flex items-start gap-3 rounded-md border p-3 cursor-pointer hover:bg-slate-50 border-slate-300\" data-testid=\"address-option-addr_sw1a_07\">",
+                  "html": "<label class=\"flex items-start gap-4 rounded-xl border-2 p-4 cursor-pointer glassmorphism border-gray-200 hover:border-brand-500/50\" data-testid=\"address-option-addr_sw1a_07\">",
                   "target": [
                     "label[data-testid=\"address-option-addr_sw1a_07\"]"
                   ]
@@ -2969,7 +2919,7 @@
             }
           ],
           "impact": null,
-          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1\" value=\"addr_sw1a_07\">",
+          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1 h-5 w-5 accent-brand-600 focus:ring-brand-500\" value=\"addr_sw1a_07\">",
           "target": [
             "input[value=\"addr_sw1a_07\"]"
           ]
@@ -2983,7 +2933,7 @@
               "data": null,
               "relatedNodes": [
                 {
-                  "html": "<label class=\"flex items-start gap-3 rounded-md border p-3 cursor-pointer hover:bg-slate-50 border-slate-300\" data-testid=\"address-option-addr_sw1a_08\">",
+                  "html": "<label class=\"flex items-start gap-4 rounded-xl border-2 p-4 cursor-pointer glassmorphism border-gray-200 hover:border-brand-500/50\" data-testid=\"address-option-addr_sw1a_08\">",
                   "target": [
                     "label[data-testid=\"address-option-addr_sw1a_08\"]"
                   ]
@@ -2994,7 +2944,7 @@
             }
           ],
           "impact": null,
-          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1\" value=\"addr_sw1a_08\">",
+          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1 h-5 w-5 accent-brand-600 focus:ring-brand-500\" value=\"addr_sw1a_08\">",
           "target": [
             "input[value=\"addr_sw1a_08\"]"
           ]
@@ -3008,7 +2958,7 @@
               "data": null,
               "relatedNodes": [
                 {
-                  "html": "<label class=\"flex items-start gap-3 rounded-md border p-3 cursor-pointer hover:bg-slate-50 border-slate-300\" data-testid=\"address-option-addr_sw1a_09\">",
+                  "html": "<label class=\"flex items-start gap-4 rounded-xl border-2 p-4 cursor-pointer glassmorphism border-gray-200 hover:border-brand-500/50\" data-testid=\"address-option-addr_sw1a_09\">",
                   "target": [
                     "label[data-testid=\"address-option-addr_sw1a_09\"]"
                   ]
@@ -3019,7 +2969,7 @@
             }
           ],
           "impact": null,
-          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1\" value=\"addr_sw1a_09\">",
+          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1 h-5 w-5 accent-brand-600 focus:ring-brand-500\" value=\"addr_sw1a_09\">",
           "target": [
             "input[value=\"addr_sw1a_09\"]"
           ]
@@ -3033,7 +2983,7 @@
               "data": null,
               "relatedNodes": [
                 {
-                  "html": "<label class=\"flex items-start gap-3 rounded-md border p-3 cursor-pointer hover:bg-slate-50 border-slate-300\" data-testid=\"address-option-addr_sw1a_10\">",
+                  "html": "<label class=\"flex items-start gap-4 rounded-xl border-2 p-4 cursor-pointer glassmorphism border-gray-200 hover:border-brand-500/50\" data-testid=\"address-option-addr_sw1a_10\">",
                   "target": [
                     "label[data-testid=\"address-option-addr_sw1a_10\"]"
                   ]
@@ -3044,7 +2994,7 @@
             }
           ],
           "impact": null,
-          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1\" value=\"addr_sw1a_10\">",
+          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1 h-5 w-5 accent-brand-600 focus:ring-brand-500\" value=\"addr_sw1a_10\">",
           "target": [
             "input[value=\"addr_sw1a_10\"]"
           ]
@@ -3058,7 +3008,7 @@
               "data": null,
               "relatedNodes": [
                 {
-                  "html": "<label class=\"flex items-start gap-3 rounded-md border p-3 cursor-pointer hover:bg-slate-50 border-slate-300\" data-testid=\"address-option-addr_sw1a_11\">",
+                  "html": "<label class=\"flex items-start gap-4 rounded-xl border-2 p-4 cursor-pointer glassmorphism border-gray-200 hover:border-brand-500/50\" data-testid=\"address-option-addr_sw1a_11\">",
                   "target": [
                     "label[data-testid=\"address-option-addr_sw1a_11\"]"
                   ]
@@ -3069,7 +3019,7 @@
             }
           ],
           "impact": null,
-          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1\" value=\"addr_sw1a_11\">",
+          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1 h-5 w-5 accent-brand-600 focus:ring-brand-500\" value=\"addr_sw1a_11\">",
           "target": [
             "input[value=\"addr_sw1a_11\"]"
           ]
@@ -3083,7 +3033,7 @@
               "data": null,
               "relatedNodes": [
                 {
-                  "html": "<label class=\"flex items-start gap-3 rounded-md border p-3 cursor-pointer hover:bg-slate-50 border-slate-300\" data-testid=\"address-option-addr_sw1a_12\">",
+                  "html": "<label class=\"flex items-start gap-4 rounded-xl border-2 p-4 cursor-pointer glassmorphism border-gray-200 hover:border-brand-500/50\" data-testid=\"address-option-addr_sw1a_12\">",
                   "target": [
                     "label[data-testid=\"address-option-addr_sw1a_12\"]"
                   ]
@@ -3094,7 +3044,7 @@
             }
           ],
           "impact": null,
-          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1\" value=\"addr_sw1a_12\">",
+          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1 h-5 w-5 accent-brand-600 focus:ring-brand-500\" value=\"addr_sw1a_12\">",
           "target": [
             "input[value=\"addr_sw1a_12\"]"
           ]
@@ -3108,7 +3058,7 @@
               "data": null,
               "relatedNodes": [
                 {
-                  "html": "<label class=\"flex items-start gap-3 rounded-md border p-3 cursor-pointer hover:bg-slate-50 border-slate-300\" data-testid=\"address-option-addr_sw1a_13\">",
+                  "html": "<label class=\"flex items-start gap-4 rounded-xl border-2 p-4 cursor-pointer glassmorphism border-gray-200 hover:border-brand-500/50\" data-testid=\"address-option-addr_sw1a_13\">",
                   "target": [
                     "label[data-testid=\"address-option-addr_sw1a_13\"]"
                   ]
@@ -3119,7 +3069,7 @@
             }
           ],
           "impact": null,
-          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1\" value=\"addr_sw1a_13\">",
+          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1 h-5 w-5 accent-brand-600 focus:ring-brand-500\" value=\"addr_sw1a_13\">",
           "target": [
             "input[value=\"addr_sw1a_13\"]"
           ]
@@ -3133,7 +3083,7 @@
               "data": null,
               "relatedNodes": [
                 {
-                  "html": "<label class=\"flex items-start gap-3 rounded-md border p-3 cursor-pointer hover:bg-slate-50 border-slate-300\" data-testid=\"address-option-addr_sw1a_14\">",
+                  "html": "<label class=\"flex items-start gap-4 rounded-xl border-2 p-4 cursor-pointer glassmorphism border-gray-200 hover:border-brand-500/50\" data-testid=\"address-option-addr_sw1a_14\">",
                   "target": [
                     "label[data-testid=\"address-option-addr_sw1a_14\"]"
                   ]
@@ -3144,7 +3094,7 @@
             }
           ],
           "impact": null,
-          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1\" value=\"addr_sw1a_14\">",
+          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1 h-5 w-5 accent-brand-600 focus:ring-brand-500\" value=\"addr_sw1a_14\">",
           "target": [
             "input[value=\"addr_sw1a_14\"]"
           ]
@@ -3287,7 +3237,7 @@
             }
           ],
           "impact": null,
-          "html": "<input id=\"postcode-input\" name=\"postcode\" type=\"text\" inputmode=\"text\" autocomplete=\"postal-code\" autocapitalize=\"characters\" placeholder=\"e.g. SW1A 1AA\" class=\"flex-1 rounded-md border border-slate-300 px-3 py-2 text-base min-h-[44px]\" value=\"SW1A 1AA\">",
+          "html": "<input id=\"postcode-input\" name=\"postcode\" type=\"text\" inputmode=\"text\" autocomplete=\"postal-code\" autocapitalize=\"characters\" placeholder=\"e.g. SW1A 1AA\" class=\"flex-1 rounded-xl bo...\" value=\"SW1A 1AA\">",
           "target": [
             "#postcode-input"
           ]
@@ -3301,7 +3251,7 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<label class=\"flex items-start gap-3 rounded-md border p-3 cursor-pointer hover:bg-slate-50 border-slate-300\" data-testid=\"address-option-addr_sw1a_01\">",
+                  "html": "<label class=\"flex items-start gap-4 rounded-xl border-2 p-4 cursor-pointer glassmorphism border-gray-200 hover:border-brand-500/50\" data-testid=\"address-option-addr_sw1a_01\">",
                   "target": [
                     "label[data-testid=\"address-option-addr_sw1a_01\"]"
                   ]
@@ -3322,7 +3272,7 @@
             }
           ],
           "impact": null,
-          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1\" value=\"addr_sw1a_01\">",
+          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1 h-5 w-5 accent-brand-600 focus:ring-brand-500\" value=\"addr_sw1a_01\">",
           "target": [
             "input[value=\"addr_sw1a_01\"]"
           ]
@@ -3336,7 +3286,7 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<label class=\"flex items-start gap-3 rounded-md border p-3 cursor-pointer hover:bg-slate-50 border-slate-300\" data-testid=\"address-option-addr_sw1a_02\">",
+                  "html": "<label class=\"flex items-start gap-4 rounded-xl border-2 p-4 cursor-pointer glassmorphism border-gray-200 hover:border-brand-500/50\" data-testid=\"address-option-addr_sw1a_02\">",
                   "target": [
                     "label[data-testid=\"address-option-addr_sw1a_02\"]"
                   ]
@@ -3357,7 +3307,7 @@
             }
           ],
           "impact": null,
-          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1\" value=\"addr_sw1a_02\">",
+          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1 h-5 w-5 accent-brand-600 focus:ring-brand-500\" value=\"addr_sw1a_02\">",
           "target": [
             "input[value=\"addr_sw1a_02\"]"
           ]
@@ -3371,7 +3321,7 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<label class=\"flex items-start gap-3 rounded-md border p-3 cursor-pointer hover:bg-slate-50 border-slate-300\" data-testid=\"address-option-addr_sw1a_03\">",
+                  "html": "<label class=\"flex items-start gap-4 rounded-xl border-2 p-4 cursor-pointer glassmorphism border-gray-200 hover:border-brand-500/50\" data-testid=\"address-option-addr_sw1a_03\">",
                   "target": [
                     "label[data-testid=\"address-option-addr_sw1a_03\"]"
                   ]
@@ -3392,7 +3342,7 @@
             }
           ],
           "impact": null,
-          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1\" value=\"addr_sw1a_03\">",
+          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1 h-5 w-5 accent-brand-600 focus:ring-brand-500\" value=\"addr_sw1a_03\">",
           "target": [
             "input[value=\"addr_sw1a_03\"]"
           ]
@@ -3406,7 +3356,7 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<label class=\"flex items-start gap-3 rounded-md border p-3 cursor-pointer hover:bg-slate-50 border-slate-300\" data-testid=\"address-option-addr_sw1a_04\">",
+                  "html": "<label class=\"flex items-start gap-4 rounded-xl border-2 p-4 cursor-pointer glassmorphism border-gray-200 hover:border-brand-500/50\" data-testid=\"address-option-addr_sw1a_04\">",
                   "target": [
                     "label[data-testid=\"address-option-addr_sw1a_04\"]"
                   ]
@@ -3427,7 +3377,7 @@
             }
           ],
           "impact": null,
-          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1\" value=\"addr_sw1a_04\">",
+          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1 h-5 w-5 accent-brand-600 focus:ring-brand-500\" value=\"addr_sw1a_04\">",
           "target": [
             "input[value=\"addr_sw1a_04\"]"
           ]
@@ -3441,7 +3391,7 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<label class=\"flex items-start gap-3 rounded-md border p-3 cursor-pointer hover:bg-slate-50 border-slate-300\" data-testid=\"address-option-addr_sw1a_05\">",
+                  "html": "<label class=\"flex items-start gap-4 rounded-xl border-2 p-4 cursor-pointer glassmorphism border-gray-200 hover:border-brand-500/50\" data-testid=\"address-option-addr_sw1a_05\">",
                   "target": [
                     "label[data-testid=\"address-option-addr_sw1a_05\"]"
                   ]
@@ -3462,7 +3412,7 @@
             }
           ],
           "impact": null,
-          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1\" value=\"addr_sw1a_05\">",
+          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1 h-5 w-5 accent-brand-600 focus:ring-brand-500\" value=\"addr_sw1a_05\">",
           "target": [
             "input[value=\"addr_sw1a_05\"]"
           ]
@@ -3476,7 +3426,7 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<label class=\"flex items-start gap-3 rounded-md border p-3 cursor-pointer hover:bg-slate-50 border-slate-300\" data-testid=\"address-option-addr_sw1a_06\">",
+                  "html": "<label class=\"flex items-start gap-4 rounded-xl border-2 p-4 cursor-pointer glassmorphism border-gray-200 hover:border-brand-500/50\" data-testid=\"address-option-addr_sw1a_06\">",
                   "target": [
                     "label[data-testid=\"address-option-addr_sw1a_06\"]"
                   ]
@@ -3497,7 +3447,7 @@
             }
           ],
           "impact": null,
-          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1\" value=\"addr_sw1a_06\">",
+          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1 h-5 w-5 accent-brand-600 focus:ring-brand-500\" value=\"addr_sw1a_06\">",
           "target": [
             "input[value=\"addr_sw1a_06\"]"
           ]
@@ -3511,7 +3461,7 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<label class=\"flex items-start gap-3 rounded-md border p-3 cursor-pointer hover:bg-slate-50 border-slate-300\" data-testid=\"address-option-addr_sw1a_07\">",
+                  "html": "<label class=\"flex items-start gap-4 rounded-xl border-2 p-4 cursor-pointer glassmorphism border-gray-200 hover:border-brand-500/50\" data-testid=\"address-option-addr_sw1a_07\">",
                   "target": [
                     "label[data-testid=\"address-option-addr_sw1a_07\"]"
                   ]
@@ -3532,7 +3482,7 @@
             }
           ],
           "impact": null,
-          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1\" value=\"addr_sw1a_07\">",
+          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1 h-5 w-5 accent-brand-600 focus:ring-brand-500\" value=\"addr_sw1a_07\">",
           "target": [
             "input[value=\"addr_sw1a_07\"]"
           ]
@@ -3546,7 +3496,7 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<label class=\"flex items-start gap-3 rounded-md border p-3 cursor-pointer hover:bg-slate-50 border-slate-300\" data-testid=\"address-option-addr_sw1a_08\">",
+                  "html": "<label class=\"flex items-start gap-4 rounded-xl border-2 p-4 cursor-pointer glassmorphism border-gray-200 hover:border-brand-500/50\" data-testid=\"address-option-addr_sw1a_08\">",
                   "target": [
                     "label[data-testid=\"address-option-addr_sw1a_08\"]"
                   ]
@@ -3567,7 +3517,7 @@
             }
           ],
           "impact": null,
-          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1\" value=\"addr_sw1a_08\">",
+          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1 h-5 w-5 accent-brand-600 focus:ring-brand-500\" value=\"addr_sw1a_08\">",
           "target": [
             "input[value=\"addr_sw1a_08\"]"
           ]
@@ -3581,7 +3531,7 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<label class=\"flex items-start gap-3 rounded-md border p-3 cursor-pointer hover:bg-slate-50 border-slate-300\" data-testid=\"address-option-addr_sw1a_09\">",
+                  "html": "<label class=\"flex items-start gap-4 rounded-xl border-2 p-4 cursor-pointer glassmorphism border-gray-200 hover:border-brand-500/50\" data-testid=\"address-option-addr_sw1a_09\">",
                   "target": [
                     "label[data-testid=\"address-option-addr_sw1a_09\"]"
                   ]
@@ -3602,7 +3552,7 @@
             }
           ],
           "impact": null,
-          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1\" value=\"addr_sw1a_09\">",
+          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1 h-5 w-5 accent-brand-600 focus:ring-brand-500\" value=\"addr_sw1a_09\">",
           "target": [
             "input[value=\"addr_sw1a_09\"]"
           ]
@@ -3616,7 +3566,7 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<label class=\"flex items-start gap-3 rounded-md border p-3 cursor-pointer hover:bg-slate-50 border-slate-300\" data-testid=\"address-option-addr_sw1a_10\">",
+                  "html": "<label class=\"flex items-start gap-4 rounded-xl border-2 p-4 cursor-pointer glassmorphism border-gray-200 hover:border-brand-500/50\" data-testid=\"address-option-addr_sw1a_10\">",
                   "target": [
                     "label[data-testid=\"address-option-addr_sw1a_10\"]"
                   ]
@@ -3637,7 +3587,7 @@
             }
           ],
           "impact": null,
-          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1\" value=\"addr_sw1a_10\">",
+          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1 h-5 w-5 accent-brand-600 focus:ring-brand-500\" value=\"addr_sw1a_10\">",
           "target": [
             "input[value=\"addr_sw1a_10\"]"
           ]
@@ -3651,7 +3601,7 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<label class=\"flex items-start gap-3 rounded-md border p-3 cursor-pointer hover:bg-slate-50 border-slate-300\" data-testid=\"address-option-addr_sw1a_11\">",
+                  "html": "<label class=\"flex items-start gap-4 rounded-xl border-2 p-4 cursor-pointer glassmorphism border-gray-200 hover:border-brand-500/50\" data-testid=\"address-option-addr_sw1a_11\">",
                   "target": [
                     "label[data-testid=\"address-option-addr_sw1a_11\"]"
                   ]
@@ -3672,7 +3622,7 @@
             }
           ],
           "impact": null,
-          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1\" value=\"addr_sw1a_11\">",
+          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1 h-5 w-5 accent-brand-600 focus:ring-brand-500\" value=\"addr_sw1a_11\">",
           "target": [
             "input[value=\"addr_sw1a_11\"]"
           ]
@@ -3686,7 +3636,7 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<label class=\"flex items-start gap-3 rounded-md border p-3 cursor-pointer hover:bg-slate-50 border-slate-300\" data-testid=\"address-option-addr_sw1a_12\">",
+                  "html": "<label class=\"flex items-start gap-4 rounded-xl border-2 p-4 cursor-pointer glassmorphism border-gray-200 hover:border-brand-500/50\" data-testid=\"address-option-addr_sw1a_12\">",
                   "target": [
                     "label[data-testid=\"address-option-addr_sw1a_12\"]"
                   ]
@@ -3707,7 +3657,7 @@
             }
           ],
           "impact": null,
-          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1\" value=\"addr_sw1a_12\">",
+          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1 h-5 w-5 accent-brand-600 focus:ring-brand-500\" value=\"addr_sw1a_12\">",
           "target": [
             "input[value=\"addr_sw1a_12\"]"
           ]
@@ -3721,7 +3671,7 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<label class=\"flex items-start gap-3 rounded-md border p-3 cursor-pointer hover:bg-slate-50 border-slate-300\" data-testid=\"address-option-addr_sw1a_13\">",
+                  "html": "<label class=\"flex items-start gap-4 rounded-xl border-2 p-4 cursor-pointer glassmorphism border-gray-200 hover:border-brand-500/50\" data-testid=\"address-option-addr_sw1a_13\">",
                   "target": [
                     "label[data-testid=\"address-option-addr_sw1a_13\"]"
                   ]
@@ -3742,7 +3692,7 @@
             }
           ],
           "impact": null,
-          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1\" value=\"addr_sw1a_13\">",
+          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1 h-5 w-5 accent-brand-600 focus:ring-brand-500\" value=\"addr_sw1a_13\">",
           "target": [
             "input[value=\"addr_sw1a_13\"]"
           ]
@@ -3756,7 +3706,7 @@
               },
               "relatedNodes": [
                 {
-                  "html": "<label class=\"flex items-start gap-3 rounded-md border p-3 cursor-pointer hover:bg-slate-50 border-slate-300\" data-testid=\"address-option-addr_sw1a_14\">",
+                  "html": "<label class=\"flex items-start gap-4 rounded-xl border-2 p-4 cursor-pointer glassmorphism border-gray-200 hover:border-brand-500/50\" data-testid=\"address-option-addr_sw1a_14\">",
                   "target": [
                     "label[data-testid=\"address-option-addr_sw1a_14\"]"
                   ]
@@ -3777,7 +3727,7 @@
             }
           ],
           "impact": null,
-          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1\" value=\"addr_sw1a_14\">",
+          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1 h-5 w-5 accent-brand-600 focus:ring-brand-500\" value=\"addr_sw1a_14\">",
           "target": [
             "input[value=\"addr_sw1a_14\"]"
           ]
@@ -4266,7 +4216,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1\" value=\"addr_sw1a_01\">",
+          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1 h-5 w-5 accent-brand-600 focus:ring-brand-500\" value=\"addr_sw1a_01\">",
           "target": [
             "input[value=\"addr_sw1a_01\"]"
           ]
@@ -4284,7 +4234,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1\" value=\"addr_sw1a_02\">",
+          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1 h-5 w-5 accent-brand-600 focus:ring-brand-500\" value=\"addr_sw1a_02\">",
           "target": [
             "input[value=\"addr_sw1a_02\"]"
           ]
@@ -4302,7 +4252,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1\" value=\"addr_sw1a_03\">",
+          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1 h-5 w-5 accent-brand-600 focus:ring-brand-500\" value=\"addr_sw1a_03\">",
           "target": [
             "input[value=\"addr_sw1a_03\"]"
           ]
@@ -4320,7 +4270,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1\" value=\"addr_sw1a_04\">",
+          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1 h-5 w-5 accent-brand-600 focus:ring-brand-500\" value=\"addr_sw1a_04\">",
           "target": [
             "input[value=\"addr_sw1a_04\"]"
           ]
@@ -4338,7 +4288,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1\" value=\"addr_sw1a_05\">",
+          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1 h-5 w-5 accent-brand-600 focus:ring-brand-500\" value=\"addr_sw1a_05\">",
           "target": [
             "input[value=\"addr_sw1a_05\"]"
           ]
@@ -4356,7 +4306,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1\" value=\"addr_sw1a_06\">",
+          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1 h-5 w-5 accent-brand-600 focus:ring-brand-500\" value=\"addr_sw1a_06\">",
           "target": [
             "input[value=\"addr_sw1a_06\"]"
           ]
@@ -4374,7 +4324,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1\" value=\"addr_sw1a_07\">",
+          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1 h-5 w-5 accent-brand-600 focus:ring-brand-500\" value=\"addr_sw1a_07\">",
           "target": [
             "input[value=\"addr_sw1a_07\"]"
           ]
@@ -4392,7 +4342,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1\" value=\"addr_sw1a_08\">",
+          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1 h-5 w-5 accent-brand-600 focus:ring-brand-500\" value=\"addr_sw1a_08\">",
           "target": [
             "input[value=\"addr_sw1a_08\"]"
           ]
@@ -4410,7 +4360,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1\" value=\"addr_sw1a_09\">",
+          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1 h-5 w-5 accent-brand-600 focus:ring-brand-500\" value=\"addr_sw1a_09\">",
           "target": [
             "input[value=\"addr_sw1a_09\"]"
           ]
@@ -4428,7 +4378,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1\" value=\"addr_sw1a_10\">",
+          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1 h-5 w-5 accent-brand-600 focus:ring-brand-500\" value=\"addr_sw1a_10\">",
           "target": [
             "input[value=\"addr_sw1a_10\"]"
           ]
@@ -4446,7 +4396,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1\" value=\"addr_sw1a_11\">",
+          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1 h-5 w-5 accent-brand-600 focus:ring-brand-500\" value=\"addr_sw1a_11\">",
           "target": [
             "input[value=\"addr_sw1a_11\"]"
           ]
@@ -4464,7 +4414,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1\" value=\"addr_sw1a_12\">",
+          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1 h-5 w-5 accent-brand-600 focus:ring-brand-500\" value=\"addr_sw1a_12\">",
           "target": [
             "input[value=\"addr_sw1a_12\"]"
           ]
@@ -4482,7 +4432,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1\" value=\"addr_sw1a_13\">",
+          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1 h-5 w-5 accent-brand-600 focus:ring-brand-500\" value=\"addr_sw1a_13\">",
           "target": [
             "input[value=\"addr_sw1a_13\"]"
           ]
@@ -4500,7 +4450,7 @@
           "all": [],
           "none": [],
           "impact": null,
-          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1\" value=\"addr_sw1a_14\">",
+          "html": "<input type=\"radio\" name=\"address\" class=\"mt-1 h-5 w-5 accent-brand-600 focus:ring-brand-500\" value=\"addr_sw1a_14\">",
           "target": [
             "input[value=\"addr_sw1a_14\"]"
           ]
@@ -4526,6 +4476,94 @@
       ]
     }
   ],
-  "incomplete": [],
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "tags": [
+        "cat.color",
+        "wcag2aa",
+        "wcag143",
+        "TTv5",
+        "TT13.c",
+        "EN-301-549",
+        "EN-9.1.4.3",
+        "ACT",
+        "RGAAv4",
+        "RGAA-3.2.1"
+      ],
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
+      "nodes": [
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#ffffff",
+                "bgColor": "#ff6600",
+                "contrastRatio": 2.93,
+                "fontSize": "9.0pt (12px)",
+                "fontWeight": "normal",
+                "messageKey": "shortTextContent",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<span aria-current=\"step\" class=\"inline-flex items-center justify-center rounded-full w-6 h-6 text-xs font-medium bg-brand-600 text-white\">1</span>",
+                  "target": [
+                    ".bg-brand-600"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element content is too short to determine if it is actual text content"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<span aria-current=\"step\" class=\"inline-flex items-center justify-center rounded-full w-6 h-6 text-xs font-medium bg-brand-600 text-white\">1</span>",
+          "target": [
+            ".bg-brand-600"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "contrastRatio": 0,
+                "fontSize": "12.0pt (16px)",
+                "fontWeight": "bold",
+                "messageKey": "bgGradient",
+                "expectedContrastRatio": "4.5:1"
+              },
+              "relatedNodes": [
+                {
+                  "html": "<button class=\"inline-flex items-ce...\" type=\"submit\" data-testid=\"postcode-submit\">",
+                  "target": [
+                    "button[type=\"submit\"]"
+                  ]
+                }
+              ],
+              "impact": "serious",
+              "message": "Element's background color could not be determined due to a background gradient"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": "serious",
+          "html": "<button class=\"inline-flex items-ce...\" type=\"submit\" data-testid=\"postcode-submit\">",
+          "target": [
+            "button[type=\"submit\"]"
+          ],
+          "failureSummary": "Fix any of the following:\n  Element's background color could not be determined due to a background gradient"
+        }
+      ]
+    }
+  ],
   "violations": []
 }

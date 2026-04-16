@@ -119,35 +119,35 @@ export function WasteTypeStep({ initial, onBack, onContinue }: Props) {
         <legend className="sr-only">Waste types</legend>
 
         <label
-          className={`flex items-start gap-3 rounded-md border p-3 cursor-pointer hover:bg-slate-50 ${
-            general ? 'border-brand-600 bg-brand-50' : 'border-slate-300'
+          className={`flex items-start gap-4 rounded-xl border-2 p-4 cursor-pointer glassmorphism ${
+            general ? 'border-brand-600 bg-brand-50 shadow-md ring-1 ring-brand-600 hover:-translate-y-0 text-brand-700' : 'border-gray-200 hover:border-brand-500/50'
           }`}
           data-testid="waste-general"
         >
           <input
             type="checkbox"
-            className="mt-1"
+            className="mt-1 h-5 w-5 accent-brand-600 focus:ring-brand-500 rounded"
             checked={general}
             onChange={(e) => handleGeneralToggle(e.target.checked)}
             aria-describedby="general-desc"
           />
           <span>
-            <span className="block font-medium">General waste</span>
-            <span id="general-desc" className="block text-sm text-slate-600">
+            <span className="block font-bold text-navy-900 text-lg">General waste</span>
+            <span id="general-desc" className="block text-sm text-gray-500 font-medium">
               Household / garden / light commercial waste.
             </span>
           </span>
         </label>
 
         <label
-          className={`flex items-start gap-3 rounded-md border p-3 cursor-pointer hover:bg-slate-50 ${
-            heavyWaste ? 'border-brand-600 bg-brand-50' : 'border-slate-300'
+          className={`flex items-start gap-4 rounded-xl border-2 p-4 cursor-pointer glassmorphism ${
+            heavyWaste ? 'border-brand-600 bg-brand-50 shadow-md ring-1 ring-brand-600 hover:-translate-y-0 text-brand-700' : 'border-gray-200 hover:border-brand-500/50'
           }`}
           data-testid="waste-heavy"
         >
           <input
             type="checkbox"
-            className="mt-1"
+            className="mt-1 h-5 w-5 accent-brand-600 focus:ring-brand-500 rounded"
             checked={heavyWaste}
             onChange={(e) => {
               setHeavyWaste(e.target.checked);
@@ -157,22 +157,22 @@ export function WasteTypeStep({ initial, onBack, onContinue }: Props) {
             aria-describedby="heavy-desc"
           />
           <span>
-            <span className="block font-medium">Heavy waste</span>
-            <span id="heavy-desc" className="block text-sm text-slate-600">
+            <span className="block font-bold text-navy-900 text-lg">Heavy waste</span>
+            <span id="heavy-desc" className="block text-sm text-gray-500 font-medium">
               Soil, rubble, concrete, bricks. Limits available skip sizes.
             </span>
           </span>
         </label>
 
         <label
-          className={`flex items-start gap-3 rounded-md border p-3 cursor-pointer hover:bg-slate-50 ${
-            plasterboard ? 'border-brand-600 bg-brand-50' : 'border-slate-300'
+          className={`flex items-start gap-4 rounded-xl border-2 p-4 cursor-pointer glassmorphism ${
+            plasterboard ? 'border-brand-600 bg-brand-50 shadow-md ring-1 ring-brand-600 hover:-translate-y-0 text-brand-700' : 'border-gray-200 hover:border-brand-500/50'
           }`}
           data-testid="waste-plasterboard"
         >
           <input
             type="checkbox"
-            className="mt-1"
+            className="mt-1 h-5 w-5 accent-brand-600 focus:ring-brand-500 rounded"
             checked={plasterboard}
             onChange={(e) => {
               handlePlasterboardToggle(e.target.checked);
@@ -181,8 +181,8 @@ export function WasteTypeStep({ initial, onBack, onContinue }: Props) {
             aria-describedby="plasterboard-desc"
           />
           <span>
-            <span className="block font-medium">Plasterboard</span>
-            <span id="plasterboard-desc" className="block text-sm text-slate-600">
+            <span className="block font-bold text-navy-900 text-lg">Plasterboard</span>
+            <span id="plasterboard-desc" className="block text-sm text-gray-500 font-medium">
               Requires separate handling — choose a percentage below.
             </span>
           </span>
@@ -191,14 +191,14 @@ export function WasteTypeStep({ initial, onBack, onContinue }: Props) {
 
       {plasterboard && (
         <fieldset
-          className="space-y-2 rounded-md border border-slate-300 bg-slate-50 p-4"
+          className="space-y-4 rounded-xl border-2 border-brand-200 bg-brand-50/50 p-5 mt-2 animate-in fade-in slide-in-from-top-2 duration-300"
           data-testid="plasterboard-options"
         >
-          <legend className="text-sm font-medium px-1">Plasterboard handling</legend>
+          <legend className="text-sm font-bold text-brand-700 px-2 tracking-wide uppercase">Plasterboard handling</legend>
           {HANDLING_OPTIONS.map((opt) => (
             <label
               key={opt.value}
-              className="flex items-center gap-3 cursor-pointer"
+              className="flex items-center gap-3 cursor-pointer text-navy-900 font-medium hover:text-brand-600 transition-colors"
               data-testid={`plasterboard-${opt.value}`}
             >
               <input
@@ -207,6 +207,7 @@ export function WasteTypeStep({ initial, onBack, onContinue }: Props) {
                 value={opt.value}
                 checked={plasterboardOption === opt.value}
                 onChange={() => handlePlasterboardOption(opt.value)}
+                className="h-5 w-5 accent-brand-600 focus:ring-brand-500"
               />
               <span>{opt.label}</span>
             </label>

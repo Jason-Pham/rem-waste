@@ -199,7 +199,7 @@ export function PostcodeStep({
             aria-invalid={validationError ? true : undefined}
             aria-describedby={validationError ? 'postcode-error' : undefined}
             placeholder="e.g. SW1A 1AA"
-            className="flex-1 rounded-md border border-slate-300 px-3 py-2 text-base min-h-[44px]"
+            className="flex-1 rounded-xl border-2 border-gray-200 px-4 py-3 text-lg min-h-[48px] focus:border-brand-600 focus:ring-4 focus:ring-brand-500/20 transition-all outline-none font-medium"
           />
           <Button
             type="submit"
@@ -277,8 +277,8 @@ export function PostcodeStep({
             {status.addresses.map((addr) => (
               <li key={addr.id}>
                 <label
-                  className={`flex items-start gap-3 rounded-md border p-3 cursor-pointer hover:bg-slate-50 ${
-                    selectedId === addr.id ? 'border-brand-600 bg-brand-50' : 'border-slate-300'
+                  className={`flex items-start gap-4 rounded-xl border-2 p-4 cursor-pointer glassmorphism ${
+                    selectedId === addr.id ? 'border-brand-600 bg-brand-50 shadow-md ring-1 ring-brand-600 hover:-translate-y-0 text-brand-700' : 'border-gray-200 hover:border-brand-500/50'
                   }`}
                   data-testid={`address-option-${addr.id}`}
                 >
@@ -288,11 +288,11 @@ export function PostcodeStep({
                     value={addr.id}
                     checked={selectedId === addr.id}
                     onChange={() => setSelectedId(addr.id)}
-                    className="mt-1"
+                    className="mt-1 h-5 w-5 accent-brand-600 focus:ring-brand-500"
                   />
                   <span>
-                    <span className="block font-medium">{addr.line1}</span>
-                    <span className="block text-sm text-slate-600">{addr.city}</span>
+                    <span className="block font-bold text-navy-900 text-lg">{addr.line1}</span>
+                    <span className="block text-sm text-gray-500 font-medium">{addr.city}</span>
                   </span>
                 </label>
               </li>

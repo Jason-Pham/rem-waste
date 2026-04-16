@@ -7,12 +7,12 @@ type Props = ButtonHTMLAttributes<HTMLButtonElement> & {
 
 export function Button({ variant = 'primary', className = '', children, ...rest }: Props) {
   const base =
-    'inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium ' +
-    'min-h-[44px] min-w-[44px] transition-colors disabled:cursor-not-allowed disabled:opacity-60';
+    'inline-flex items-center justify-center rounded-xl px-6 py-3 text-base font-bold tracking-wide ' +
+    'min-h-[48px] min-w-[48px] transition-all duration-300 disabled:cursor-not-allowed disabled:opacity-50 active:scale-95 disabled:active:scale-100 disabled:hover:translate-y-0 disabled:hover:shadow-none';
   const styles =
     variant === 'primary'
-      ? 'bg-brand-600 text-white hover:bg-brand-700 disabled:hover:bg-brand-600'
-      : 'bg-white text-brand-700 border border-brand-600 hover:bg-brand-50';
+      ? 'bg-gradient-to-br from-brand-500 to-brand-600 text-white shadow-md hover:shadow-lg hover:shadow-brand-500/20 hover:-translate-y-0.5 border border-brand-600'
+      : 'bg-white text-navy-900 border-2 border-navy-800 hover:bg-navy-900 hover:text-white shadow-sm';
   return (
     <button className={`${base} ${styles} ${className}`} {...rest}>
       {children}

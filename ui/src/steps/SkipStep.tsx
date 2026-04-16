@@ -121,24 +121,24 @@ export function SkipStep({ postcode, heavyWaste, initialSize, onBack, onContinue
                     onClick={() => !skip.disabled && setSelected(skip.size)}
                     data-testid={`skip-${skip.size}`}
                     data-disabled={skip.disabled ? 'true' : 'false'}
-                    className={`w-full text-left rounded-md border p-4 min-h-[96px] transition-colors
+                    className={`w-full text-left rounded-xl border-2 p-5 min-h-[104px] transition-all duration-300 relative
                       ${
                         skip.disabled
-                          ? 'border-slate-200 bg-slate-50 text-slate-500 cursor-not-allowed'
+                          ? 'border-gray-200 bg-gray-50/50 text-gray-400 cursor-not-allowed'
                           : isSelected
-                            ? 'border-brand-600 bg-brand-50'
-                            : 'border-slate-300 hover:bg-slate-50'
+                            ? 'border-brand-600 bg-brand-50 shadow-md ring-1 ring-brand-600 scale-[1.02] z-10'
+                            : 'border-gray-200 glassmorphism hover:border-brand-500/50 hover:shadow-lg hover:-translate-y-1'
                       }`}
                   >
                     <span className="flex items-baseline justify-between gap-2">
-                      <span className="font-medium text-base">{label}</span>
-                      <span className="text-sm font-semibold" data-testid={`skip-${skip.size}-price`}>
+                      <span className={`font-bold text-lg ${skip.disabled ? 'text-gray-400' : 'text-navy-900'}`}>{label}</span>
+                      <span className={`text-xl font-extrabold ${skip.disabled ? 'text-gray-400' : 'text-brand-600'}`} data-testid={`skip-${skip.size}-price`}>
                         £{skip.price}
                       </span>
                     </span>
                     {skip.disabled && skip.reason && (
                       <span
-                        className="block text-xs text-slate-600 mt-2"
+                        className="block text-sm text-gray-500 mt-3 font-medium"
                         data-testid={`skip-${skip.size}-reason`}
                       >
                         {skip.reason}
