@@ -1,0 +1,13 @@
+node_modules
+dist
+.git
+.github
+automation
+evidence
+docs
+*.md
+!ui/**/*.md
+.DS_Store
+coverage
+test-results
+playwright-report

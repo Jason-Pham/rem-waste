@@ -1,0 +1,10 @@
+.claude/
+node_modules
+.DS_Store
+.env
+.env.local
+dist
+test-results
+playwright-report
+blob-report
+evidence/bugs/*/trace.zip
