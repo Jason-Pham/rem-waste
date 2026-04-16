@@ -55,6 +55,21 @@ export default defineConfig({
       use: { ...devices['Pixel 5'] },
     },
     {
+      name: 'mobile-safari',
+      testIgnore: /tests\/evidence\/.*/,
+      use: { ...devices['iPhone 12'] },
+    },
+    {
+      name: 'google-chrome',
+      testIgnore: /tests\/evidence\/.*/,
+      use: { ...devices['Desktop Chrome'], channel: 'chrome' },
+    },
+    {
+      name: 'microsoft-edge',
+      testIgnore: /tests\/evidence\/.*/,
+      use: { ...devices['Desktop Edge'], channel: 'msedge' },
+    },
+    {
       // Evidence project — runs the capture specs with video always on.
       name: 'evidence',
       testMatch: /tests\/evidence\/.*\.spec\.ts/,

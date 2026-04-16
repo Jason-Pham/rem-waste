@@ -85,6 +85,15 @@ jobs:
           - project: mobile-chrome
             label: 'E2E — Mobile Chrome'
             browsers: 'chromium'
+          - project: mobile-safari
+            label: 'E2E — Mobile Safari'
+            browsers: 'webkit'
+          - project: google-chrome
+            label: 'E2E — Google Chrome'
+            browsers: 'chrome'
+          - project: microsoft-edge
+            label: 'E2E — Microsoft Edge'
+            browsers: 'msedge'
 
     name: ${{ matrix.label }}
 

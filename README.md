@@ -8,7 +8,7 @@ Graded against [ASSESSMENT.md](./ASSESSMENT.md). Strategy and risk register in [
 
 ## Demo
 
-- **Public demo**: [https://jason-pham.github.io/rem-waste/](https://jason-pham.github.io/rem-waste/) — static deploy via GitHub Pages ([`deploy-pages.yml`](./.github/workflows/deploy-pages.yml)). Post-deploy E2E matrix (Chromium · Firefox · WebKit · Mobile Chrome) runs via [`e2e-live.yml`](./.github/workflows/e2e-live.yml) on every push to `main` and daily at 06:00 UTC.
+- **Public demo**: [https://jason-pham.github.io/rem-waste/](https://jason-pham.github.io/rem-waste/) — static deploy via GitHub Pages ([`deploy-pages.yml`](./.github/workflows/deploy-pages.yml)). Post-deploy E2E matrix (Chromium · Firefox · WebKit · Mobile Chrome · Mobile Safari · Google Chrome · Microsoft Edge) runs via [`e2e-live.yml`](./.github/workflows/e2e-live.yml) on every push to `main` and daily at 06:00 UTC.
 - **Local dev**: `cd ui && npm install && npm run dev` → [http://localhost:5173](http://localhost:5173)
 - **Single-command Docker** (mirrors the public demo): `docker compose up --build` → [http://localhost:4173](http://localhost:4173). Brings up the production-built, MSW-mocked SPA. No backend. Ctrl+C to stop.
 
@@ -171,7 +171,7 @@ npx playwright test --project=evidence
 
 - **State not persisted** — refresh mid-flow returns to Step 1. Documented in `manual-tests.md` CC-N-01.
 - **Mock `Idempotency-Key`** — the client sends it on `POST /api/booking/confirm`; the mock does not dedupe on retry (see BUG-003). A real backend would.
-- **CI runs cross-browser** — [`e2e-live.yml`](./.github/workflows/e2e-live.yml) fans out to Chromium, Firefox, WebKit and Mobile Chrome against the deployed Pages URL. Locally the quick-start installs Chromium only; install others as needed via `npx playwright install firefox webkit`.
+- **CI runs cross-browser** — [`e2e-live.yml`](./.github/workflows/e2e-live.yml) fans out to Chromium, Firefox, WebKit, Mobile Chrome, Mobile Safari, Google Chrome, and Microsoft Edge against the deployed Pages URL. Locally the quick-start installs Chromium only; install others as needed via `npx playwright install firefox webkit msedge chrome`.
 
 ## Submission checklist (§1)
 
