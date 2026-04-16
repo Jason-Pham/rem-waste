@@ -27,8 +27,7 @@ npm run build && npm run preview # production preview http://localhost:4173
 cd ../automation
 npm install
 npx playwright install chromium --with-deps
-npx playwright test                          # full suite (functional + API)
-npx playwright test --project=evidence       # regenerate evidence (screenshots, video, axe)
+npx playwright test                          # full suite (functional + API + a11y)
 npx playwright show-report                   # last HTML report
 
 # Lighthouse (requires local Chrome)
@@ -46,10 +45,10 @@ rem-waste/
 ├── CLAUDE.md                  # project orientation
 ├── docs/test-strategy.md      # which flows get automated + manual bucketing
 ├── README.md                  # this file
-├── manual-tests.md            # 38 manual test cases (§6 ≥35)
+├── manual-tests.md            # 36 manual test cases (§6 ≥35)
 ├── bug-reports.md             # 3 real bug reports (§7 ≥3, ≥1 state-transition)
 ├── ui/                        # React + Vite + TS app + MSW mocks
-├── automation/                # Playwright + TS test suite (51 tests × 4 browsers + evidence specs)
+├── automation/                # Playwright + TS test suite (53 tests × 7-browser matrix in CI)
 └── evidence/                  # §9 artifacts — screenshots, video, Lighthouse, axe
 ```
 
@@ -80,19 +79,18 @@ Retry counter state lives in [ui/src/mocks/fixtures/state.ts](./ui/src/mocks/fix
 
 ## What's tested
 
-### Automation (Playwright + TS · 51 tests per browser, 4-browser matrix in CI)
+### Automation (Playwright + TS · 53 tests per browser, 7-browser matrix in CI)
 
 | Where | Count | What |
 | --- | --- | --- |
 | [`tests/e2e/flow-a-general.spec.ts`](./automation/tests/e2e/flow-a-general.spec.ts) | 1 | **Flow A** — SW1A 1AA → General waste → 4-yard → confirm (covers all 4 endpoints; double-submit asserted by request counting) |
 | [`tests/e2e/flow-b-heavy-plasterboard.spec.ts`](./automation/tests/e2e/flow-b-heavy-plasterboard.spec.ts) | 1 | **Flow B** — BS1 4DJ retry → Heavy + Plasterboard → disabled skips → double-click confirm |
 | [`tests/e2e/step1-postcode.spec.ts`](./automation/tests/e2e/step1-postcode.spec.ts) | 13 | Step 1: validation, normalization, all four §4 fixtures (SW1A/EC1A/M1/BS1) |
-| [`tests/e2e/step2-waste.spec.ts`](./automation/tests/e2e/step2-waste.spec.ts) | 7 | Step 2: branching, plasterboard handling, mutually-exclusive logic |
-| [`tests/e2e/step3-skip.spec.ts`](./automation/tests/e2e/step3-skip.spec.ts) | 8 | Step 3: ≥8 skips, disabled-state under heavy waste, aria-checked semantics |
-| [`tests/e2e/step4-review.spec.ts`](./automation/tests/e2e/step4-review.spec.ts) | 5 | Step 4: summary, price-breakdown arithmetic, single-fire confirm, BK-id format |
+| [`tests/e2e/step2-waste.spec.ts`](./automation/tests/e2e/step2-waste.spec.ts) | 8 | Step 2: branching, plasterboard handling, mutually-exclusive logic |
+| [`tests/e2e/step3-skip.spec.ts`](./automation/tests/e2e/step3-skip.spec.ts) | 7 | Step 3: ≥8 skips, disabled-state under heavy waste, aria-checked semantics |
+| [`tests/e2e/step4-review.spec.ts`](./automation/tests/e2e/step4-review.spec.ts) | 6 | Step 4: summary, price-breakdown arithmetic, single-fire confirm, BK-id format |
 | [`tests/e2e/accessibility.spec.ts`](./automation/tests/e2e/accessibility.spec.ts) | 4 | axe-core scan per step (WCAG 2 A/AA) |
-| [`tests/api/*.spec.ts`](./automation/tests/api/) | 12 | Contract tests — zod-validated shape for every §5 endpoint, in-browser fetch through MSW |
-| [`tests/evidence/*.spec.ts`](./automation/tests/evidence/) | — | Captures screenshots / video / bug-evidence PNGs (run via `--project=evidence`) |
+| [`tests/api/*.spec.ts`](./automation/tests/api/) | 13 | Contract tests — zod-validated shape for every §5 endpoint, in-browser fetch through MSW |
 
 Assertions fire at every step. Selectors prefer accessible roles/names; `data-testid` is the fallback (never CSS-chained to styling). No hard waits; all awaits hang off events/responses/locator states.
 
@@ -100,15 +98,15 @@ Assertions fire at every step. Selectors prefer accessible roles/names; `data-te
 
 ### Manual (§6)
 
-[manual-tests.md](./manual-tests.md) — **39 cases** across 5 areas (Postcode 12 · Waste 7 · Skip 8 · Review 7 · Cross-cutting 5), bucketed as:
+[manual-tests.md](./manual-tests.md) — **36 cases** grouped by category, bucketed as:
 
 | Bucket | Count | Minimum |
 | --- | --- | --- |
-| Negative | 11 | ≥10 |
-| Edge | 7 | ≥6 |
-| API-failure | 6 | ≥4 |
+| Negative | 10 | ≥10 |
+| Edge | 6 | ≥6 |
+| API-failure | 4 | ≥4 |
 | State-transition | 5 | ≥4 |
-| Positive | 10 | — |
+| Positive | 11 | — |
 
 Strict markdown table format; one row per case with ID, type, priority, steps, expected, actual, status.
 
@@ -121,7 +119,7 @@ Strict markdown table format; one row per case with ID, type, priority, steps, e
 - **BUG-003** *(state-transition, mock-state)* — BS1 4DJ retry counter leaks across "Book another skip" restarts.
 - **BUG-004** *(state-transition)* — Step 1 unselects the previously chosen address when the user re-submits the same postcode.
 
-Each has severity · priority · environment · steps · actual vs expected · screenshot evidence · suspected root cause. Evidence PNGs live in [`evidence/bugs/`](./evidence/bugs/), generated by [`tests/evidence/bug-evidence.spec.ts`](./automation/tests/evidence/bug-evidence.spec.ts).
+Each has severity · priority · environment · steps · actual vs expected · screenshot + video evidence · suspected root cause. Evidence PNGs and MP4 walkthroughs live in [`evidence/bugs/`](./evidence/bugs/).
 
 ## Evidence bundle (§9)
 
@@ -139,13 +137,11 @@ All artefacts in [evidence/](./evidence/):
 
 Lighthouse reports are against the **production preview build** (`npm run build && npm run preview`) — that's what deploys. Dev-server figures are lower due to HMR and unminified code.
 
-Regenerate the whole bundle:
+Regenerate the evidence bundle:
 
-```bash
-cd automation
-npx playwright test --project=evidence
-# Lighthouse needs a fresh preview server — see Quick start above
-```
+- **Screenshots + video**: captured with Playwright built-ins during `npx playwright test` — HTML report includes retain-on-failure traces/videos. Curated frames were exported manually from successful runs.
+- **Lighthouse**: run `npx lighthouse` against the preview server (see Quick start above) for both `--preset=desktop` and default (mobile).
+- **Axe (a11y)**: `npx playwright test tests/e2e/accessibility.spec.ts` — asserts zero WCAG 2 A/AA violations per step via `@axe-core/playwright`. The snapshot JSON under [`evidence/a11y/`](./evidence/a11y/) was exported from an earlier axe run and mirrors the live assertions.
 
 ## Accessibility highlights
 
