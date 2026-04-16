@@ -1,18 +1,13 @@
 name: E2E (live Pages)
 
 # Runs the Playwright suite against the deployed GitHub Pages site at
-# https://jason-pham.github.io/rem-waste/.
+# https://jason-pham.github.io/rem-waste/ across four browser projects.
 #
 # Triggers:
 #   - workflow_run: fires after "Deploy to GitHub Pages" completes, so every
 #     push to main is covered once the fresh bundle is actually live.
 #   - schedule:     daily at 06:00 UTC — catches drift from external sources.
 #   - workflow_dispatch: manual re-run button.
-#
-# Excluded specs:
-#   - tests/evidence/*     — capture specs, not functional.
-#   - tests/e2e/postcode-smoke.spec.ts — uses page.route() to simulate network
-#     errors, which does not intercept SW-controlled requests on the live site.
 
 on:
   workflow_run:
@@ -26,18 +21,82 @@ on:
 permissions:
   contents: read
 
+env:
+  LIVE_URL: https://jason-pham.github.io/rem-waste/
+
 jobs:
-  e2e:
+  # -------------------------------------------------------------------------
+  # unit-tests — fast fail gate: strict typecheck on both packages.
+  # -------------------------------------------------------------------------
+  unit-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: |
+            ui/package-lock.json
+            automation/package-lock.json
+
+      - name: Install ui deps
+        working-directory: ui
+        run: npm ci
+
+      - name: Typecheck ui (tsc --noEmit)
+        working-directory: ui
+        run: npx tsc --noEmit
+
+      - name: Install automation deps
+        working-directory: automation
+        run: npm ci
+
+      - name: Typecheck automation (tsc --noEmit)
+        working-directory: automation
+        run: npx tsc --noEmit
+
+  # -------------------------------------------------------------------------
+  # e2e-tests — full Playwright suite against the deployed Pages URL,
+  # fanned out across four browser projects.
+  # -------------------------------------------------------------------------
+  e2e-tests:
+    needs: unit-tests
     # On workflow_run, only proceed if the deploy actually succeeded.
     if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
+
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - project: chromium
+            label: 'E2E — Chromium'
+            browsers: 'chromium'
+          - project: firefox
+            label: 'E2E — Firefox'
+            browsers: 'firefox'
+          - project: webkit
+            label: 'E2E — WebKit'
+            browsers: 'webkit'
+          - project: mobile-chrome
+            label: 'E2E — Mobile Chrome'
+            browsers: 'chromium'
+
+    name: ${{ matrix.label }}
+
     defaults:
       run:
         working-directory: automation
+
     env:
       BASE_URL: https://jason-pham.github.io/rem-waste/
+      PROJECTS: ${{ matrix.project }}
       CI: 'true'
+
     steps:
       - uses: actions/checkout@v4
 
@@ -49,21 +108,27 @@ jobs:
 
       - run: npm ci
 
-      - name: Install Playwright browsers
-        run: npx playwright install chromium --with-deps
+      - name: Install Playwright browser (${{ matrix.browsers }})
+        run: npx playwright install ${{ matrix.browsers }} --with-deps
 
-      - name: Run Playwright tests against live site
+      - name: Run Playwright tests
         run: >-
           npx playwright test
-          --project=chromium
-          tests/e2e/flow-a-general.spec.ts
-          tests/e2e/flow-b-heavy-plasterboard.spec.ts
+          tests/e2e
           tests/api
 
-      - name: Upload Playwright report
+      - name: Upload HTML report
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: playwright-report-${{ github.run_id }}
+          name: playwright-report-${{ matrix.project }}-${{ github.run_id }}
           path: automation/playwright-report
+          retention-days: 14
+
+      - name: Upload JUnit results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: junit-${{ matrix.project }}-${{ github.run_id }}
+          path: automation/results.xml
           retention-days: 14
