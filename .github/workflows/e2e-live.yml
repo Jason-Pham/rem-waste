@@ -68,6 +68,10 @@ jobs:
     if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     timeout-minutes: 20
+    # Branded-browser jobs (chrome/msedge) may be unavailable on some runners;
+    # continue-on-error is set per-job via the matrix `branded` flag so that
+    # core engine jobs (chromium/firefox/webkit) remain required.
+    continue-on-error: ${{ matrix.branded == true }}
 
     strategy:
       fail-fast: false
@@ -88,12 +92,19 @@ jobs:
           - project: mobile-safari
             label: 'E2E — Mobile Safari'
             browsers: 'webkit'
+          # Branded-channel jobs: Google Chrome and Microsoft Edge must be
+          # pre-installed on the runner. github-hosted ubuntu-latest includes
+          # Chrome stable by default; msedge is installed below via the
+          # `npx playwright install` step. These jobs use `continue-on-error: true`
+          # so a transient runner variance does not block the core suite.
           - project: google-chrome
             label: 'E2E — Google Chrome'
             browsers: 'chrome'
+            branded: true
           - project: microsoft-edge
             label: 'E2E — Microsoft Edge'
             browsers: 'msedge'
+            branded: true
 
     name: ${{ matrix.label }}
 

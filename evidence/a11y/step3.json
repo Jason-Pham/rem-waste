@@ -13,7 +13,7 @@
     "orientationAngle": 0,
     "orientationType": "landscape-primary"
   },
-  "timestamp": "2026-04-16T18:55:38.064Z",
+  "timestamp": "2026-04-16T19:32:11.901Z",
   "url": "http://localhost:5173/",
   "toolOptions": {
     "runOnly": {
@@ -3712,6 +3712,31 @@
             {
               "id": "color-contrast",
               "data": {
+                "fgColor": "#cc5200",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4.39,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "bold",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 4.39"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<span class=\"text-xl font-extrabold text-brand-700\" data-testid=\"skip-4-yard-price\">£120</span>",
+          "target": [
+            "span[data-testid=\"skip-4-yard-price\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
                 "fgColor": "#10131b",
                 "bgColor": "#ffffff",
                 "contrastRatio": 18.56,
@@ -3730,6 +3755,31 @@
           "html": "<span class=\"font-bold text-lg text-navy-900\">6 Yard Skip</span>",
           "target": [
             "button[data-testid=\"skip-6-yard\"] > .items-baseline.justify-between.gap-2 > .text-navy-900.text-lg.font-bold"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#cc5200",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4.39,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "bold",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 4.39"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<span class=\"text-xl font-extrabold text-brand-700\" data-testid=\"skip-6-yard-price\">£180</span>",
+          "target": [
+            "span[data-testid=\"skip-6-yard-price\"]"
           ]
         },
         {
@@ -3762,6 +3812,31 @@
             {
               "id": "color-contrast",
               "data": {
+                "fgColor": "#cc5200",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4.39,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "bold",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 4.39"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<span class=\"text-xl font-extrabold text-brand-700\" data-testid=\"skip-8-yard-price\">£230</span>",
+          "target": [
+            "span[data-testid=\"skip-8-yard-price\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
                 "fgColor": "#10131b",
                 "bgColor": "#ffffff",
                 "contrastRatio": 18.56,
@@ -3787,6 +3862,31 @@
             {
               "id": "color-contrast",
               "data": {
+                "fgColor": "#cc5200",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4.39,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "bold",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 4.39"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<span class=\"text-xl font-extrabold text-brand-700\" data-testid=\"skip-16-yard-price\">£400</span>",
+          "target": [
+            "span[data-testid=\"skip-16-yard-price\"]"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
                 "fgColor": "#10131b",
                 "bgColor": "#ffffff",
                 "contrastRatio": 18.56,
@@ -3805,6 +3905,31 @@
           "html": "<span class=\"font-bold text-lg text-navy-900\">20 Yard Skip</span>",
           "target": [
             "button[data-testid=\"skip-20-yard\"] > .items-baseline.justify-between.gap-2 > .text-navy-900.text-lg.font-bold"
+          ]
+        },
+        {
+          "any": [
+            {
+              "id": "color-contrast",
+              "data": {
+                "fgColor": "#cc5200",
+                "bgColor": "#ffffff",
+                "contrastRatio": 4.39,
+                "fontSize": "15.0pt (20px)",
+                "fontWeight": "bold",
+                "expectedContrastRatio": "3:1"
+              },
+              "relatedNodes": [],
+              "impact": "serious",
+              "message": "Element has sufficient color contrast of 4.39"
+            }
+          ],
+          "all": [],
+          "none": [],
+          "impact": null,
+          "html": "<span class=\"text-xl font-extrabold text-brand-700\" data-testid=\"skip-20-yard-price\">£480</span>",
+          "target": [
+            "span[data-testid=\"skip-20-yard-price\"]"
           ]
         },
         {
@@ -4550,7 +4675,7 @@
                 {
                   "html": "<span class=\"inline-flex items-center justify-center rounded-full w-6 h-6 text-xs font-medium bg-brand-100 text-brand-700\">1</span>",
                   "target": [
-                    ".items-center:nth-child(1) > .bg-brand-100.text-brand-700.rounded-full"
+                    ".items-center:nth-child(1) > .bg-brand-100.rounded-full.w-6"
                   ]
                 }
               ],
@@ -4563,7 +4688,7 @@
           "impact": "serious",
           "html": "<span class=\"inline-flex items-center justify-center rounded-full w-6 h-6 text-xs font-medium bg-brand-100 text-brand-700\">1</span>",
           "target": [
-            ".items-center:nth-child(1) > .bg-brand-100.text-brand-700.rounded-full"
+            ".items-center:nth-child(1) > .bg-brand-100.rounded-full.w-6"
           ],
           "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
         },
@@ -4584,7 +4709,7 @@
                 {
                   "html": "<span class=\"inline-flex items-center justify-center rounded-full w-6 h-6 text-xs font-medium bg-brand-100 text-brand-700\">2</span>",
                   "target": [
-                    ".items-center:nth-child(2) > .bg-brand-100.text-brand-700.rounded-full"
+                    ".items-center:nth-child(2) > .bg-brand-100.rounded-full.w-6"
                   ]
                 }
               ],
@@ -4597,7 +4722,7 @@
           "impact": "serious",
           "html": "<span class=\"inline-flex items-center justify-center rounded-full w-6 h-6 text-xs font-medium bg-brand-100 text-brand-700\">2</span>",
           "target": [
-            ".items-center:nth-child(2) > .bg-brand-100.text-brand-700.rounded-full"
+            ".items-center:nth-child(2) > .bg-brand-100.rounded-full.w-6"
           ],
           "failureSummary": "Fix any of the following:\n  Element content is too short to determine if it is actual text content"
         },
@@ -4638,197 +4763,5 @@
       ]
     }
   ],
-  "violations": [
-    {
-      "id": "color-contrast",
-      "impact": "serious",
-      "tags": [
-        "cat.color",
-        "wcag2aa",
-        "wcag143",
-        "TTv5",
-        "TT13.c",
-        "EN-301-549",
-        "EN-9.1.4.3",
-        "ACT",
-        "RGAAv4",
-        "RGAA-3.2.1"
-      ],
-      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
-      "help": "Elements must meet minimum color contrast ratio thresholds",
-      "helpUrl": "https://dequeuniversity.com/rules/axe/4.11/color-contrast?application=playwright",
-      "nodes": [
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ff6600",
-                "bgColor": "#ffffff",
-                "contrastRatio": 2.93,
-                "fontSize": "15.0pt (20px)",
-                "fontWeight": "bold",
-                "messageKey": null,
-                "expectedContrastRatio": "3:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<button type=\"button\" role=\"radio\" aria-checked=\"false\" aria-disabled=\"false\" data-testid=\"skip-4-yard\" data-disabled=\"false\" class=\"w-full text-left rou...\">",
-                  "target": [
-                    "button[data-testid=\"skip-4-yard\"]"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element has insufficient color contrast of 2.93 (foreground color: #ff6600, background color: #ffffff, font size: 15.0pt (20px), font weight: bold). Expected contrast ratio of 3:1"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<span class=\"text-xl font-extrabold text-brand-600\" data-testid=\"skip-4-yard-price\">£120</span>",
-          "target": [
-            "span[data-testid=\"skip-4-yard-price\"]"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.93 (foreground color: #ff6600, background color: #ffffff, font size: 15.0pt (20px), font weight: bold). Expected contrast ratio of 3:1"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ff6600",
-                "bgColor": "#ffffff",
-                "contrastRatio": 2.93,
-                "fontSize": "15.0pt (20px)",
-                "fontWeight": "bold",
-                "messageKey": null,
-                "expectedContrastRatio": "3:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<button type=\"button\" role=\"radio\" aria-checked=\"false\" aria-disabled=\"false\" data-testid=\"skip-6-yard\" data-disabled=\"false\" class=\"w-full text-left rou...\">",
-                  "target": [
-                    "button[data-testid=\"skip-6-yard\"]"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element has insufficient color contrast of 2.93 (foreground color: #ff6600, background color: #ffffff, font size: 15.0pt (20px), font weight: bold). Expected contrast ratio of 3:1"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<span class=\"text-xl font-extrabold text-brand-600\" data-testid=\"skip-6-yard-price\">£180</span>",
-          "target": [
-            "span[data-testid=\"skip-6-yard-price\"]"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.93 (foreground color: #ff6600, background color: #ffffff, font size: 15.0pt (20px), font weight: bold). Expected contrast ratio of 3:1"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ff6600",
-                "bgColor": "#ffffff",
-                "contrastRatio": 2.93,
-                "fontSize": "15.0pt (20px)",
-                "fontWeight": "bold",
-                "messageKey": null,
-                "expectedContrastRatio": "3:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<button type=\"button\" role=\"radio\" aria-checked=\"false\" aria-disabled=\"false\" data-testid=\"skip-8-yard\" data-disabled=\"false\" class=\"w-full text-left rou...\">",
-                  "target": [
-                    "button[data-testid=\"skip-8-yard\"]"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element has insufficient color contrast of 2.93 (foreground color: #ff6600, background color: #ffffff, font size: 15.0pt (20px), font weight: bold). Expected contrast ratio of 3:1"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<span class=\"text-xl font-extrabold text-brand-600\" data-testid=\"skip-8-yard-price\">£230</span>",
-          "target": [
-            "span[data-testid=\"skip-8-yard-price\"]"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.93 (foreground color: #ff6600, background color: #ffffff, font size: 15.0pt (20px), font weight: bold). Expected contrast ratio of 3:1"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ff6600",
-                "bgColor": "#ffffff",
-                "contrastRatio": 2.93,
-                "fontSize": "15.0pt (20px)",
-                "fontWeight": "bold",
-                "messageKey": null,
-                "expectedContrastRatio": "3:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<button type=\"button\" role=\"radio\" aria-checked=\"false\" aria-disabled=\"false\" data-testid=\"skip-16-yard\" data-disabled=\"false\" class=\"w-full text-left rou...\">",
-                  "target": [
-                    "button[data-testid=\"skip-16-yard\"]"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element has insufficient color contrast of 2.93 (foreground color: #ff6600, background color: #ffffff, font size: 15.0pt (20px), font weight: bold). Expected contrast ratio of 3:1"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<span class=\"text-xl font-extrabold text-brand-600\" data-testid=\"skip-16-yard-price\">£400</span>",
-          "target": [
-            "span[data-testid=\"skip-16-yard-price\"]"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.93 (foreground color: #ff6600, background color: #ffffff, font size: 15.0pt (20px), font weight: bold). Expected contrast ratio of 3:1"
-        },
-        {
-          "any": [
-            {
-              "id": "color-contrast",
-              "data": {
-                "fgColor": "#ff6600",
-                "bgColor": "#ffffff",
-                "contrastRatio": 2.93,
-                "fontSize": "15.0pt (20px)",
-                "fontWeight": "bold",
-                "messageKey": null,
-                "expectedContrastRatio": "3:1"
-              },
-              "relatedNodes": [
-                {
-                  "html": "<button type=\"button\" role=\"radio\" aria-checked=\"false\" aria-disabled=\"false\" data-testid=\"skip-20-yard\" data-disabled=\"false\" class=\"w-full text-left rou...\">",
-                  "target": [
-                    "button[data-testid=\"skip-20-yard\"]"
-                  ]
-                }
-              ],
-              "impact": "serious",
-              "message": "Element has insufficient color contrast of 2.93 (foreground color: #ff6600, background color: #ffffff, font size: 15.0pt (20px), font weight: bold). Expected contrast ratio of 3:1"
-            }
-          ],
-          "all": [],
-          "none": [],
-          "impact": "serious",
-          "html": "<span class=\"text-xl font-extrabold text-brand-600\" data-testid=\"skip-20-yard-price\">£480</span>",
-          "target": [
-            "span[data-testid=\"skip-20-yard-price\"]"
-          ],
-          "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.93 (foreground color: #ff6600, background color: #ffffff, font size: 15.0pt (20px), font weight: bold). Expected contrast ratio of 3:1"
-        }
-      ]
-    }
-  ]
+  "violations": []
 }

@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { mkdirSync } from 'node:fs';
+import { cpSync, mkdirSync, statSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -7,11 +7,37 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 /**
- * Bug-evidence capture spec — produces the PNGs referenced from bug-reports.md.
+ * Bug-evidence capture spec — produces the PNGs (and videos for key bugs)
+ * referenced from bug-reports.md.
  * Runs only under the `evidence` Playwright project.
  *
- * Output: ../evidence/bugs/*.png
+ * Output: ../evidence/bugs/*.png  and  ../evidence/bugs/*.webm
  */
+
+async function saveVideo(
+  page: import('@playwright/test').Page,
+  testInfo: import('@playwright/test').TestInfo,
+  name: string,
+  out: string,
+) {
+  const videoPath = await page.video()?.path();
+  if (!videoPath) return;
+  await page.close();
+  const deadline = Date.now() + 8_000;
+  while (Date.now() < deadline) {
+    try {
+      if (statSync(videoPath).size > 0) break;
+    } catch { /* not yet */ }
+    await new Promise((r) => setTimeout(r, 200));
+  }
+  const dest = join(out, `${name}.webm`);
+  try {
+    cpSync(videoPath, dest);
+    testInfo.attach(name, { path: dest, contentType: 'video/webm' });
+  } catch (e) {
+    console.warn('Video copy failed', e);
+  }
+}
 
 const OUT = join(__dirname, '..', '..', '..', 'evidence', 'bugs');
 mkdirSync(OUT, { recursive: true });
@@ -64,7 +90,7 @@ test.describe('Bug evidence', () => {
     await page.screenshot({ path: join(OUT, 'BUG-004-after.png'), fullPage: true });
   });
 
-  test('BUG-002 — Back from Step 2 re-fires postcode lookup', async ({ page }) => {
+  test('BUG-002 — Back from Step 2 re-fires postcode lookup', async ({ page }, testInfo) => {
     await bootstrap(page);
 
     // Track requests
@@ -96,9 +122,10 @@ test.describe('Bug evidence', () => {
     }, lookups.length);
     await page.screenshot({ path: join(OUT, 'BUG-002-network.png'), fullPage: true });
     expect(lookups.length).toBeGreaterThanOrEqual(2);
+    await saveVideo(page, testInfo, 'BUG-002-back-refires-lookup', OUT);
   });
 
-  test('BUG-003 — counter leaks across "Book another skip"', async ({ page }) => {
+  test('BUG-003 — counter leaks across "Book another skip"', async ({ page }, testInfo) => {
     await bootstrap(page);
 
     const lookups: { ts: string; status?: number }[] = [];
@@ -150,5 +177,6 @@ test.describe('Bug evidence', () => {
       document.body.appendChild(el);
     }, run2Statuses);
     await page.screenshot({ path: join(OUT, 'BUG-003-counter-leak.png'), fullPage: true });
+    await saveVideo(page, testInfo, 'BUG-003-counter-leak', OUT);
   });
 });

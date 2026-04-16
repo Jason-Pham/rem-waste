@@ -51,6 +51,20 @@ test.describe('Step 2 — Waste type', () => {
     await expect(page.getByTestId('waste-validation')).toContainText(/how much plasterboard/i);
   });
 
+  test('BUG-001 regression — validation clears immediately on handling-option selection (no re-submit needed)', async ({
+    page,
+    wastePage,
+  }) => {
+    // Trigger the validation message
+    await wastePage.togglePlasterboard();
+    await wastePage.continueButton.click();
+    await expect(page.getByTestId('waste-validation')).toBeVisible();
+
+    // Selecting a handling option must clear the message without another Continue click
+    await page.getByTestId('plasterboard-under_10').click();
+    await expect(page.getByTestId('waste-validation')).toBeHidden();
+  });
+
   test('toggling general clears heavy + plasterboard (mutually exclusive)', async ({
     page,
     wastePage,

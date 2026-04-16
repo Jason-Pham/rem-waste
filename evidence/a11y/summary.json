@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-16T18:55:38.530Z",
+  "generatedAt": "2026-04-16T19:32:12.345Z",
   "steps": [
     {
       "step": 1,
@@ -15,9 +15,9 @@
     },
     {
       "step": 3,
-      "violations": 1,
+      "violations": 0,
       "critical": 0,
-      "serious": 1
+      "serious": 0
     },
     {
       "step": 4,
