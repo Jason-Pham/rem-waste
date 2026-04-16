@@ -1,4 +1,4 @@
-# rem-waste — Skip Booking Flow
+# rem-waste — Booking Flow
 
 Take-home QA assessment: a 4-step skip-booking web app with manual tests, bug reports, end-to-end automation, and a UI/UX evidence bundle.
 
